@@ -1,0 +1,153 @@
+.wrap {
+  max-width: 1100px;
+  margin: 28px auto;
+  padding: 22px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--card-radius);
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.title p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.back-btn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: var(--card-radius);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+
+.back-btn:hover {
+  background: #e9ecef;
+}
+
+.content {
+  background: var(--card);
+  border-radius: var(--card-radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  max-width: none;
+}
+
+.content h1,
+.content h2,
+.content h3 {
+  color: var(--text);
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.content h1 {
+  font-size: 28px;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 8px;
+}
+
+.content h2 {
+  font-size: 24px;
+  color: var(--accent);
+}
+
+.content h3 {
+  font-size: 20px;
+  color: var(--accent2);
+}
+
+.content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content li {
+  margin: 8px 0;
+  padding: 12px;
+  background: #f8f9fa;
+  border-left: 4px solid var(--accent);
+  border-radius: var(--card-radius);
+}
+
+.content .epic {
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: var(--card-radius);
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.content .sprint {
+  background: var(--card);
+  border: 2px solid var(--accent2);
+  border-radius: var(--card-radius);
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.content .sprint h4 {
+  margin: 0 0 8px 0;
+  color: var(--accent2);
+  font-size: 18px;
+}
+
+.content .sprint ul {
+  margin: 0;
+}
+
+.content .sprint .deliverable {
+  font-weight: bold;
+  color: var(--text);
+  margin-top: 8px;
+}
+
+.taiga-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 12px 24px;
+  border-radius: var(--card-radius);
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.taiga-btn:hover {
+  background: #0056b3;
+}

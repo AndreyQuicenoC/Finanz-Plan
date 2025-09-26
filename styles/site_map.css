@@ -1,0 +1,187 @@
+.wrap {
+  max-width: 1100px;
+  margin: 28px auto;
+  padding: 22px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--card-radius);
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.title p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Tree card */
+.card {
+  background: var(--card);
+  border-radius: var(--card-radius);
+  padding: 18px;
+  margin-top: 18px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: var(--card-radius);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 13px;
+  box-shadow: var(--shadow);
+}
+
+.btn:hover {
+  background: #e9ecef;
+}
+
+/* Tree */
+.tree {
+  margin-top: 18px;
+}
+
+ul.tree-root,
+ul.tree-root ul {
+  list-style: none;
+  padding-left: 14px;
+  margin: 6px 0;
+}
+
+ul.tree-root {
+  padding-left: 6px;
+}
+
+li.node {
+  margin: 6px 0;
+  padding: 8px;
+  border-radius: var(--card-radius);
+  background: #e9ecef;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border);
+}
+
+.node .label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.node .label .name {
+  font-weight: 600;
+}
+
+.node .label .desc {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--card-radius);
+  background: var(--card);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.branch {
+  margin-left: 28px;
+}
+
+/* badge colors */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid var(--border);
+}
+
+.public {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.private {
+  background: #d4edda;
+  color: #155724;
+}
+
+.admin {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* responsive */
+@media (max-width: 720px) {
+  .wrap {
+    padding: 12px;
+  }
+  .header {
+    gap: 10px;
+  }
+  .logo {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.back-btn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: var(--card-radius);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  box-shadow: var(--shadow);
+}
+
+.back-btn:hover {
+  background: #e9ecef;
+}

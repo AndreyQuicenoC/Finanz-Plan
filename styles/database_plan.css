@@ -1,0 +1,43 @@
+svg {
+  width: 100%;
+  height: 720px;
+  border-radius: var(--card-radius);
+  background: white;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.table {
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.title {
+  font-weight: 700;
+  fill: var(--text);
+}
+
+.field {
+  fill: var(--text);
+  opacity: 0.9;
+}
+
+.pk {
+  font-weight: 700;
+  fill: #0d6efd;
+}
+
+.fk {
+  font-weight: 600;
+  fill: #198754;
+}
+
+.box {
+  rx: var(--card-radius);
+  ry: var(--card-radius);
+}
+
+.note {
+  font-size: 12px;
+  fill: var(--muted);
+}

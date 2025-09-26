@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ERD - Gestor de Finanzas Personales</title>
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/database_plan.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="logo">ER</div>
+        <div>
+          <h1>Diagrama Entidad–Relación (ERD) — Gestor de Finanzas</h1>
+          <p class="lead">
+            Modelo relacional optimizado para PostgreSQL. Relaciones principales
+            y campos clave representados.
+          </p>
+        </div>
+      </header>
+
+      <a href="../index.html" class="back-btn">← Volver al inicio</a>
+
+      <svg viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg">
+        <!-- relaciones (líneas) -->
+        <!-- usuarios -> cuentas -->
+        <line
+          x1="300"
+          y1="100"
+          x2="360"
+          y2="100"
+          stroke="#9aa"
+          stroke-width="2"
+          marker-end="url(#arrow)"
+        />
+        <!-- usuarios -> categorias -->
+        <line
+          x1="300"
+          y1="100"
+          x2="680"
+          y2="100"
+          stroke="#9aa"
+          stroke-width="2"
+          marker-end="url(#arrow)"
+        />
+        <!-- cuentas -> transacciones -->
+        <line
+          x1="200"
+          y1="260"
+          x2="360"
+          y2="260"
+          stroke="#9aa"
+          stroke-width="2"
+          marker-end="url(#arrow)"
+        />
+        <!-- categorias -> transacciones -->
+        <line
+          x1="740"
+          y1="120"
+          x2="400"
+          y2="220"
+          stroke="#9aa"
+          stroke-width="2"
+          marker-end="url(#arrow)"
+        />
+        <!-- usuarios -> transacciones (via cuenta) shown implicitly -->
+        <!-- usuarios -> presupuestos -->
+        <line
+          x1="300"
+          y1="100"
+          x2="540"
+          y2="260"
+          stroke="#9aa"
+          stroke-width="2"
+          marker-end="url(#arrow)"
+        />
+        <!-- usuarios -> recomendaciones -->
+        <line
+          x1="300"
+          y1="100"
+          x2="780"
+          y2="260"
+          stroke="#9aa"
+          stroke-width="2"
+          marker-end="url(#arrow)"
+        />
+        <!-- usuarios -> eventos_financieros -->
+        <line
+          x1="300"
+          y1="100"
+          x2="200"
+          y2="480"
+          stroke="#9aa"
+          stroke-width="2"
+          marker-end="url(#arrow)"
+        />
+        <!-- usuarios -> reportes -->
+        <line
+          x1="300"
+          y1="100"
+          x2="440"
+          y2="420"
+          stroke="#9aa"
+          stroke-width="2"
+          marker-end="url(#arrow)"
+        />
+        <!-- usuarios -> exportaciones -->
+        <line
+          x1="300"
+          y1="100"
+          x2="840"
+          y2="420"
+          stroke="#9aa"
+          stroke-width="2"
+          marker-end="url(#arrow)"
+        />
+        <!-- usuarios -> notificaciones -->
+        <line
+          x1="300"
+          y1="100"
+          x2="200"
+          y2="560"
+          stroke="#9aa"
+          stroke-width="2"
+          marker-end="url(#arrow)"
+        />
+
+        <defs>
+          <marker
+            id="arrow"
+            markerWidth="10"
+            markerHeight="10"
+            refX="6"
+            refY="5"
+            orient="auto"
+          >
+            <path d="M0,0 L10,5 L0,10 z" fill="#9aa" />
+          </marker>
+        </defs>
+
+        <!-- tablas -->
+        <!-- usuarios -->
+        <g transform="translate(40,40)">
+          <rect
+            width="260"
+            height="120"
+            rx="10"
+            ry="10"
+            fill="#f8fafc"
+            stroke="#e6eef8"
+          />
+          <text x="12" y="24" class="title">usuarios</text>
+          <text x="12" y="50" class="pk">id (PK)</text>
+          <text x="12" y="68" class="field">nombre</text>
+          <text x="12" y="86" class="field">email (UNIQUE)</text>
+          <text x="12" y="104" class="field">password_hash</text>
+        </g>
+
+        <!-- cuentas -->
+        <g transform="translate(360,40)">
+          <rect
+            width="260"
+            height="120"
+            rx="10"
+            ry="10"
+            fill="#fff7ed"
+            stroke="#ffe8c2"
+          />
+          <text x="12" y="24" class="title">cuentas</text>
+          <text x="12" y="50" class="pk">id (PK)</text>
+          <text x="12" y="68" class="fk">usuario_id (FK → usuarios.id)</text>
+          <text x="12" y="86" class="field">nombre</text>
+          <text x="12" y="104" class="field">saldo_inicial</text>
+        </g>
+
+        <!-- categorias -->
+        <g transform="translate(680,40)">
+          <rect
+            width="260"
+            height="120"
+            rx="10"
+            ry="10"
+            fill="#eef2ff"
+            stroke="#e0e7ff"
+          />
+          <text x="12" y="24" class="title">categorias</text>
+          <text x="12" y="50" class="pk">id (PK)</text>
+          <text x="12" y="68" class="fk">usuario_id (FK → usuarios.id)</text>
+          <text x="12" y="86" class="field">nombre</text>
+          <text x="12" y="104" class="field">tipo (ingreso|egreso)</text>
+        </g>
+
+        <!-- transacciones -->
+        <g transform="translate(40,200)">
+          <rect
+            width="360"
+            height="160"
+            rx="10"
+            ry="10"
+            fill="#f0fdf4"
+            stroke="#dcfce7"
+          />
+          <text x="12" y="24" class="title">transacciones</text>
+          <text x="12" y="50" class="pk">id (PK)</text>
+          <text x="12" y="68" class="fk">cuenta_id (FK → cuentas.id)</text>
+          <text x="12" y="86" class="fk">
+            categoria_id (FK → categorias.id)
+          </text>
+          <text x="12" y="104" class="field">monto</text>
+          <text x="12" y="122" class="field">tipo (ingreso|egreso)</text>
+          <text x="12" y="140" class="field">fecha</text>
+        </g>
+
+        <!-- presupuestos -->
+        <g transform="translate(440,220)">
+          <rect
+            width="300"
+            height="120"
+            rx="10"
+            ry="10"
+            fill="#fff1f2"
+            stroke="#ffdde0"
+          />
+          <text x="12" y="24" class="title">presupuestos</text>
+          <text x="12" y="50" class="pk">id (PK)</text>
+          <text x="12" y="68" class="fk">usuario_id (FK → usuarios.id)</text>
+          <text x="12" y="86" class="fk">
+            categoria_id (FK → categorias.id)
+          </text>
+          <text x="12" y="104" class="field">monto_limite</text>
+        </g>
+
+        <!-- recomendaciones -->
+        <g transform="translate(780,220)">
+          <rect
+            width="340"
+            height="100"
+            rx="10"
+            ry="10"
+            fill="#eef7ff"
+            stroke="#dbeafe"
+          />
+          <text x="12" y="24" class="title">recomendaciones</text>
+          <text x="12" y="50" class="pk">id (PK)</text>
+          <text x="12" y="68" class="fk">usuario_id (FK → usuarios.id)</text>
+          <text x="12" y="86" class="field">mensaje</text>
+        </g>
+
+        <!-- eventos_financieros -->
+        <g transform="translate(40,400)">
+          <rect
+            width="300"
+            height="100"
+            rx="10"
+            ry="10"
+            fill="#fffaf0"
+            stroke="#fff0d6"
+          />
+          <text x="12" y="24" class="title">eventos_financieros</text>
+          <text x="12" y="50" class="pk">id (PK)</text>
+          <text x="12" y="68" class="fk">usuario_id (FK → usuarios.id)</text>
+          <text x="12" y="86" class="field">titulo</text>
+        </g>
+
+        <!-- reportes -->
+        <g transform="translate(380,360)">
+          <rect
+            width="300"
+            height="100"
+            rx="10"
+            ry="10"
+            fill="#f8fafc"
+            stroke="#e6eef8"
+          />
+          <text x="12" y="24" class="title">reportes</text>
+          <text x="12" y="50" class="pk">id (PK)</text>
+          <text x="12" y="68" class="fk">usuario_id (FK → usuarios.id)</text>
+          <text x="12" y="86" class="field">tipo</text>
+        </g>
+
+        <!-- exportaciones -->
+        <g transform="translate(740,360)">
+          <rect
+            width="300"
+            height="100"
+            rx="10"
+            ry="10"
+            fill="#f7fff9"
+            stroke="#dffaf0"
+          />
+          <text x="12" y="24" class="title">exportaciones</text>
+          <text x="12" y="50" class="pk">id (PK)</text>
+          <text x="12" y="68" class="fk">usuario_id (FK → usuarios.id)</text>
+          <text x="12" y="86" class="field">formato</text>
+        </g>
+
+        <!-- notificaciones -->
+        <g transform="translate(40,520)">
+          <rect
+            width="300"
+            height="100"
+            rx="10"
+            ry="10"
+            fill="#fff8ff"
+            stroke="#f1e7ff"
+          />
+          <text x="12" y="24" class="title">notificaciones</text>
+          <text x="12" y="50" class="pk">id (PK)</text>
+          <text x="12" y="68" class="fk">usuario_id (FK → usuarios.id)</text>
+          <text x="12" y="86" class="field">titulo</text>
+        </g>
+
+        <!-- nota -->
+        <text x="40" y="700" class="note">
+          Notas: PK = Primary Key, FK = Foreign Key. Ajusta campos y tipos según
+          necesidades (ej. índices, constraints, JSONB para reportes).
+        </text>
+      </svg>
+    </div>
+  </body>
+</html>

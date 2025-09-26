@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Historias de Usuario - Finanz</title>
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/user_stories.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="header">
+        <div class="logo">HU</div>
+        <div class="title">
+          <h1>Historias de Usuario — Finanz</h1>
+          <p>Casos de uso y requerimientos del usuario</p>
+        </div>
+      </div>
+      <a href="../index.html" class="back-btn">
+        <span>←</span> Volver al inicio
+      </a>
+      <div class="content">
+        <h1>📌 Épicas del proyecto Gestor de Finanzas</h1>
+
+        <h2>🌐 Zona Pública</h2>
+
+        <h3>E-1: Experiencia de Primer Contacto (Landing & Marketing)</h3>
+        <p class="epic">
+          Funcionalidades para atraer y educar a visitantes potenciales
+        </p>
+        <p class="epic-desc">
+          Esta épica se enfoca en crear una primera impresión impactante y
+          proporcionar toda la información necesaria para que los visitantes
+          entiendan el valor de Finanz, exploren sus características, comparen
+          planes y obtengan soporte antes de registrarse. Incluye la landing
+          page, tours interactivos, blog educativo, detalles sobre la empresa,
+          FAQs, contacto y documentación legal.
+        </p>
+        <ul>
+          <li>
+            <strong>HU01: Landing Page</strong><br />*Como visitante quiero ver
+            la página principal con información clara y CTA, para entender
+            rápidamente el valor de la app.*
+          </li>
+          <li>
+            <strong>HU02: Cómo funciona / Tour</strong><br />*Como visitante
+            quiero un recorrido ilustrativo para aprender a usar la aplicación.*
+          </li>
+          <li>
+            <strong>HU03: Características principales</strong><br />*Como
+            visitante quiero ver las funciones destacadas de la app para evaluar
+            si me conviene usarla.*
+          </li>
+          <li>
+            <strong>HU04: Planes/Precios</strong><br />*Como visitante quiero
+            comparar planes gratuitos y de pago para decidir si me registro.*
+          </li>
+          <li>
+            <strong>HU05: Blog / Artículos</strong><br />*Como visitante quiero
+            acceder a contenido educativo de finanzas para aprender y confiar en
+            la aplicación.*
+          </li>
+          <li>
+            <strong>HU06: Sobre nosotros</strong><br />*Como visitante quiero
+            conocer la empresa y el equipo para sentir confianza.*
+          </li>
+          <li>
+            <strong>HU07: Preguntas frecuentes</strong><br />*Como visitante
+            quiero resolver dudas rápidas sin contactar soporte.*
+          </li>
+          <li>
+            <strong>HU08: Contacto / Soporte</strong><br />*Como visitante
+            quiero enviar un mensaje al soporte mediante un formulario para
+            recibir ayuda.*
+          </li>
+          <li>
+            <strong>HU09: Política y términos</strong><br />*Como visitante
+            quiero leer la documentación legal para entender mis derechos y
+            deberes.*
+          </li>
+        </ul>
+
+        <h3>E-2: Acceso y Autenticación</h3>
+        <p class="epic">Sistema seguro de registro y acceso a la plataforma</p>
+        <p class="epic-desc">
+          Esta épica cubre el proceso completo de autenticación, permitiendo a
+          los visitantes convertirse en usuarios registrados de manera segura y
+          sencilla. Incluye formularios de registro, login, recuperación de
+          contraseña y validaciones necesarias para proteger las cuentas.
+        </p>
+        <ul>
+          <li>
+            <strong>HU10: Registro</strong><br />*Como visitante quiero
+            registrarme en la plataforma para crear una cuenta y acceder a las
+            funcionalidades.*
+          </li>
+          <li>
+            <strong>HU11: Login</strong><br />*Como usuario registrado quiero
+            iniciar sesión para acceder a mi cuenta personal.*
+          </li>
+          <li>
+            <strong>HU12: Recuperar contraseña</strong><br />*Como usuario
+            quiero recuperar mi contraseña si la olvido para poder acceder
+            nuevamente.*
+          </li>
+        </ul>
+
+        <h2>🔒 Zona Privada</h2>
+
+        <h3>E-3: Finanzas Personales Básicas</h3>
+        <p class="epic">
+          Herramientas esenciales para gestionar finanzas diarias
+        </p>
+        <p class="epic-desc">
+          Esta épica proporciona las funcionalidades core para que los usuarios
+          comiencen a controlar sus finanzas inmediatamente después del
+          registro. Incluye un dashboard resumen, registro manual de
+          transacciones, importación automática desde archivos, gestión de
+          cuentas y visualización en calendario.
+        </p>
+        <ul>
+          <li>
+            <strong>HU13: Dashboard</strong><br />*Como usuario quiero ver un
+            panel con mi resumen financiero para tener una visión general de mi
+            estado actual.*
+          </li>
+          <li>
+            <strong>HU14: Registrar transacciones</strong><br />*Como usuario
+            quiero añadir ingresos y egresos para llevar control de mis
+            finanzas.*
+          </li>
+          <li>
+            <strong>HU15: Importar transacciones desde CSV/Excel</strong
+            ><br />*Como usuario quiero cargar mis movimientos bancarios
+            automáticamente para ahorrar tiempo.*
+          </li>
+          <li>
+            <strong>HU16: Gestión de cuentas</strong><br />*Como usuario quiero
+            crear, editar y eliminar cuentas bancarias o tarjetas para organizar
+            mis finanzas.*
+          </li>
+          <li>
+            <strong>HU17: Calendario financiero</strong><br />*Como usuario
+            quiero programar pagos y verlos en un calendario para no olvidar
+            fechas importantes.*
+          </li>
+        </ul>
+
+        <h3>E-4: Análisis y Control Avanzado</h3>
+        <p class="epic">
+          Funcionalidades de inteligencia y planificación financiera
+        </p>
+        <p class="epic-desc">
+          Esta épica añade capas de análisis profundo y recomendaciones
+          inteligentes para potenciar la gestión financiera. Incluye reportes
+          visuales, definición de metas personalizadas y un agente de IA que
+          proporciona sugerencias basadas en el comportamiento del usuario.
+        </p>
+        <ul>
+          <li>
+            <strong>HU18: Reportes y estadísticas</strong><br />*Como usuario
+            quiero visualizar gráficos interactivos de gastos e ingresos para
+            analizar mis hábitos financieros.*
+          </li>
+          <li>
+            <strong>HU19: Metas financieras</strong><br />*Como usuario quiero
+            crear metas de ahorro o inversión para motivarme a cumplirlas.*
+          </li>
+          <li>
+            <strong>HU20: Recomendaciones del Agente IA</strong><br />*Como
+            usuario quiero recibir sugerencias inteligentes para mejorar mi
+            ahorro o inversión.*
+          </li>
+        </ul>
+
+        <h3>E-5: Perfil y Soporte en la App</h3>
+        <p class="epic">Personalización y asistencia integrada</p>
+        <p class="epic-desc">
+          Esta épica se centra en la personalización de la experiencia del
+          usuario y el soporte directo dentro de la aplicación. Permite
+          gestionar perfiles, configuraciones de seguridad y acceso a guías de
+          ayuda sin salir de la plataforma.
+        </p>
+        <ul>
+          <li>
+            <strong>HU21: Perfil y configuración</strong><br />*Como usuario
+            quiero gestionar mis datos personales, seguridad y notificaciones
+            para personalizar la app.*
+          </li>
+          <li>
+            <strong>HU22: Centro de ayuda interno</strong><br />*Como usuario
+            quiero leer guías rápidas desde la app para resolver dudas sin salir
+            de ella.*
+          </li>
+        </ul>
+
+        <h2>🛠️ Zona Administrativa</h2>
+
+        <h3>E-6: Administración del Sistema</h3>
+        <p class="epic">Herramientas para operar y mantener la plataforma</p>
+        <p class="epic-desc">
+          Esta épica proporciona las funcionalidades necesarias para que los
+          administradores gestionen la plataforma de manera eficiente y segura.
+          Incluye paneles de control de usuarios, monitoreo de métricas del
+          sistema y controles de seguridad para dependencias y permisos.
+        </p>
+        <ul>
+          <li>
+            <strong>HU23: Panel de administración de usuarios</strong
+            ><br />*Como administrador quiero ver y gestionar usuarios, roles y
+            accesos para mantener la seguridad.*
+          </li>
+          <li>
+            <strong>HU24: Monitoreo y métricas del sistema</strong><br />*Como
+            administrador quiero revisar el uptime, logs y recursos para
+            garantizar estabilidad.*
+          </li>
+          <li>
+            <strong>HU25: Gestión de seguridad</strong><br />*Como administrador
+            quiero ejecutar controles de dependencias y permisos para reducir
+            riesgos de seguridad.*
+          </li>
+        </ul>
+
+        <h1>🗂️ Propuesta de Sprints (MVP → producto robusto)</h1>
+        <p>
+          Cada sprint de 2 semanas, con entregables funcionales y prioridad en
+          <strong>MVP primero</strong>.
+        </p>
+
+        <div class="sprint">
+          <h4>Sprint 1 – MVP Acceso y Público Básico</h4>
+          <ul>
+            <li>HU01: Landing Page</li>
+            <li>HU02: Cómo funciona / Tour</li>
+            <li>HU03: Características principales</li>
+            <li>HU04: Planes/Precios</li>
+            <li>HU10: Registro</li>
+            <li>HU11: Login</li>
+            <li>HU12: Recuperar contraseña</li>
+          </ul>
+          <p class="deliverable">
+            🎯 Entregable: Sitio funcional con acceso de usuarios.
+          </p>
+        </div>
+
+        <div class="sprint">
+          <h4>Sprint 2 – Finanzas básicas</h4>
+          <ul>
+            <li>HU13: Dashboard</li>
+            <li>HU14: Registrar transacciones</li>
+            <li>HU16: Gestión de cuentas</li>
+            <li>HU17: Calendario financiero</li>
+          </ul>
+          <p class="deliverable">
+            🎯 Entregable: Gestión mínima de finanzas (lo básico para usar la
+            app).
+          </p>
+        </div>
+
+        <div class="sprint">
+          <h4>Sprint 3 – Valor agregado (Reportes e IA inicial)</h4>
+          <ul>
+            <li>HU18: Reportes y estadísticas</li>
+            <li>HU19: Metas financieras</li>
+            <li>
+              HU20: Recomendaciones con IA (versión simple, reglas básicas antes
+              de IA completa)
+            </li>
+          </ul>
+          <p class="deliverable">
+            🎯 Entregable: Funciones de análisis y diferenciación del proyecto.
+          </p>
+        </div>
+
+        <div class="sprint">
+          <h4>Sprint 4 – Experiencia avanzada</h4>
+          <ul>
+            <li>HU05: Blog/Artículos</li>
+            <li>HU06: Sobre nosotros</li>
+            <li>HU07: Preguntas frecuentes</li>
+            <li>HU08: Contacto/Soporte</li>
+            <li>HU09: Política y términos</li>
+            <li>HU15: Importar transacciones CSV/Excel</li>
+          </ul>
+          <p class="deliverable">
+            🎯 Entregable: Mejor experiencia de usuario y usabilidad.
+          </p>
+        </div>
+
+        <div class="sprint">
+          <h4>Sprint 5 – Administración y robustez</h4>
+          <ul>
+            <li>HU21: Perfil y configuración</li>
+            <li>HU22: Centro de ayuda interno</li>
+            <li>HU23: Panel de administración</li>
+            <li>HU24: Monitoreo métricas</li>
+            <li>HU25: Gestión de seguridad</li>
+          </ul>
+          <p class="deliverable">🎯 Entregable: Producto completo y robusto.</p>
+        </div>
+
+        <a
+          href="https://tree.taiga.io/project/andreyquiceno-finanz/"
+          class="taiga-btn"
+          target="_blank"
+          >Ver en Taiga</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
