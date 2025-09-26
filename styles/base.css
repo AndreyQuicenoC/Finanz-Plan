@@ -58,9 +58,15 @@ header {
   color: white;
   font-weight: 700;
   box-shadow: var(--shadow);
-  margin: 0 auto 20px;
+  margin:
+   0 auto 20px;
 }
-
+.logo-index {
+  width: 100px;
+  height: auto;
+  margin: 0 auto 20px;
+  display: block;
+}
 h1 {
   margin: 0;
   font-size: 32px;

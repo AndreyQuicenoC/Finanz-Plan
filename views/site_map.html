@@ -10,7 +10,7 @@
   <body>
     <div class="wrap">
       <div class="header">
-        <div class="logo">GF</div>
+        <div class="logo">MS</div>
         <div class="title">
           <h1>
             Mapa de sitio — Gestor de Finanzas Personales (zona pública +
@@ -57,7 +57,7 @@
             <li class="node" data-type="root">
               <button class="toggle" aria-expanded="true">▾</button>
               <div class="label">
-                <div class="name">🌐 Zona Pública (antes de login)</div>
+                <div class="name">Zona Pública (antes de login)</div>
                 <div class="desc">
                   Páginas que ve un usuario nuevo sin autenticación
                 </div>
@@ -156,7 +156,7 @@
             <li class="node" data-type="root" style="margin-top: 18px">
               <button class="toggle" aria-expanded="false">▸</button>
               <div class="label">
-                <div class="name">🔒 Zona Privada (después de login)</div>
+                <div class="name">Zona Privada (después de login)</div>
                 <div class="desc">
                   Funcionalidades core para usuarios autenticados
                 </div>
@@ -243,7 +243,7 @@
             <li class="node" data-type="root" style="margin-top: 18px">
               <button class="toggle" aria-expanded="false">▸</button>
               <div class="label">
-                <div class="name">🛠️ Zona Administrativa (solo equipo)</div>
+                <div class="name">Zona Administrativa (solo equipo)</div>
                 <div class="desc">
                   Herramientas internas para operación y DevOps
                 </div>
@@ -283,60 +283,6 @@
       </p>
     </div>
 
-    <script>
-      // Toggle behavior for each toggle button
-      document.querySelectorAll(".toggle").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          const branch = btn.parentElement.nextElementSibling;
-          const expanded = btn.getAttribute("aria-expanded") === "true";
-          if (!branch) return;
-          if (expanded) {
-            branch.style.display = "none";
-            btn.setAttribute("aria-expanded", "false");
-            btn.textContent = "▸";
-          } else {
-            branch.style.display = "block";
-            btn.setAttribute("aria-expanded", "true");
-            btn.textContent = "▾";
-          }
-        });
-      });
-
-      // Expand all / Collapse all
-      const expandAll = document.getElementById("expandAll");
-      const collapseAll = document.getElementById("collapseAll");
-      expandAll.addEventListener("click", () => {
-        document
-          .querySelectorAll(".branch")
-          .forEach((b) => (b.style.display = "block"));
-        document.querySelectorAll(".toggle").forEach((t) => {
-          t.setAttribute("aria-expanded", "true");
-          t.textContent = "▾";
-        });
-      });
-      collapseAll.addEventListener("click", () => {
-        document
-          .querySelectorAll(".branch")
-          .forEach((b) => (b.style.display = "none"));
-        document.querySelectorAll(".toggle").forEach((t) => {
-          t.setAttribute("aria-expanded", "false");
-          t.textContent = "▸";
-        });
-      });
-
-      // Download HTML
-      document.getElementById("download").addEventListener("click", () => {
-        const html = "<!doctype html>" + document.documentElement.outerHTML;
-        const blob = new Blob([html], { type: "text/html" });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "site_map_gestor_finanzas.html";
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-        URL.revokeObjectURL(url);
-      });
-    </script>
+    <script src="../scripts/site_map.js"></script>
   </body>
 </html>
