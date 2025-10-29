@@ -36,49 +36,427 @@
           page, tours interactivos, blog educativo, detalles sobre la empresa,
           FAQs, contacto y documentación legal.
         </p>
-        <ul>
-          <li>
-            <strong>HU01: Landing Page</strong><br />*Como visitante quiero ver
-            la página principal con información clara y CTA, para entender
-            rápidamente el valor de la app.*
-          </li>
-          <li>
-            <strong>HU02: Cómo funciona / Tour</strong><br />*Como visitante
-            quiero un recorrido ilustrativo para aprender a usar la aplicación.*
-          </li>
-          <li>
-            <strong>HU03: Características principales</strong><br />*Como
-            visitante quiero ver las funciones destacadas de la app para evaluar
-            si me conviene usarla.*
-          </li>
-          <li>
-            <strong>HU04: Planes/Precios</strong><br />*Como visitante quiero
-            comparar planes gratuitos y de pago para decidir si me registro.*
-          </li>
-          <li>
-            <strong>HU05: Blog / Artículos</strong><br />*Como visitante quiero
-            acceder a contenido educativo de finanzas para aprender y confiar en
-            la aplicación.*
-          </li>
-          <li>
-            <strong>HU06: Sobre nosotros</strong><br />*Como visitante quiero
-            conocer la empresa y el equipo para sentir confianza.*
-          </li>
-          <li>
-            <strong>HU07: Preguntas frecuentes</strong><br />*Como visitante
-            quiero resolver dudas rápidas sin contactar soporte.*
-          </li>
-          <li>
-            <strong>HU08: Contacto / Soporte</strong><br />*Como visitante
-            quiero enviar un mensaje al soporte mediante un formulario para
-            recibir ayuda.*
-          </li>
-          <li>
-            <strong>HU09: Política y términos</strong><br />*Como visitante
-            quiero leer la documentación legal para entender mis derechos y
-            deberes.*
-          </li>
-        </ul>
+
+        <!-- HU01: Landing Page -->
+        <div class="user-story-detail">
+          <h4>HU01: Landing Page</h4>
+          <p class="story-text"><em>Como visitante<br>
+          Quiero ver la página principal con información clara y CTA<br>
+          Para entender rápidamente el valor de la app.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Visualización inicial:</strong>
+                <ul>
+                  <li>Al acceder a <code>/</code> se muestra un hero section con título principal, subtítulo, imagen/video y botón CTA "Comenzar gratis".</li>
+                  <li>Navegación clara con links a: Características, Precios, Blog, Nosotros, Contacto.</li>
+                </ul>
+              </li>
+              <li><strong>Secciones de contenido:</strong>
+                <ul>
+                  <li>Sección de beneficios principales (3-4 cards con iconos).</li>
+                  <li>Sección de características destacadas.</li>
+                  <li>Testimonios o casos de uso.</li>
+                  <li>CTA secundario antes del footer.</li>
+                </ul>
+              </li>
+              <li><strong>Responsividad:</strong>
+                <ul>
+                  <li>Diseño optimizado para 320px (móvil), 768px (tablet) y 1024px+ (desktop).</li>
+                  <li>Imágenes con lazy loading para rendimiento.</li>
+                </ul>
+              </li>
+              <li><strong>Performance:</strong>
+                <ul>
+                  <li>Carga inicial ≤ 3 segundos.</li>
+                  <li>Lighthouse score ≥ 90 en Performance.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Página desplegada en Vercel con dominio configurado.</li>
+              <li>Todos los links funcionales.</li>
+              <li>Pruebas en Chrome, Firefox y Safari.</li>
+              <li>README actualizado con estructura de landing.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HU02: Cómo funciona / Tour -->
+        <div class="user-story-detail">
+          <h4>HU02: Cómo funciona / Tour</h4>
+          <p class="story-text"><em>Como visitante<br>
+          Quiero un recorrido ilustrativo<br>
+          Para aprender a usar la aplicación.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Visualización del tour:</strong>
+                <ul>
+                  <li>Sección dedicada en landing o página <code>/como-funciona</code>.</li>
+                  <li>Mínimo 4 pasos ilustrados con imágenes o GIFs.</li>
+                  <li>Cada paso con título, descripción breve y visual.</li>
+                </ul>
+              </li>
+              <li><strong>Navegación:</strong>
+                <ul>
+                  <li>Botones "Anterior" y "Siguiente" para recorrer pasos.</li>
+                  <li>Indicadores visuales de progreso (dots o números).</li>
+                </ul>
+              </li>
+              <li><strong>Responsividad:</strong>
+                <ul>
+                  <li>Tour adaptado a móvil, tablet y desktop.</li>
+                  <li>Swipe en móvil para cambiar de paso.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Tour completamente funcional y navegable.</li>
+              <li>Imágenes optimizadas (WebP, lazy loading).</li>
+              <li>Probado en dispositivos móviles reales.</li>
+              <li>Documentado en README.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HU03: Características principales -->
+        <div class="user-story-detail">
+          <h4>HU03: Características principales</h4>
+          <p class="story-text"><em>Como visitante<br>
+          Quiero ver las funciones destacadas de la app<br>
+          Para evaluar si me conviene usarla.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Visualización de features:</strong>
+                <ul>
+                  <li>Página <code>/caracteristicas</code> o sección en landing.</li>
+                  <li>Mínimo 6 características con icono, título y descripción.</li>
+                  <li>Cada feature con ejemplo visual (screenshot o ilustración).</li>
+                </ul>
+              </li>
+              <li><strong>Organización:</strong>
+                <ul>
+                  <li>Features agrupadas por categorías (Gestión, Análisis, Seguridad).</li>
+                  <li>Layout en grid responsivo.</li>
+                </ul>
+              </li>
+              <li><strong>CTA:</strong>
+                <ul>
+                  <li>Botón "Probar gratis" visible al final de cada sección.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Todas las características listadas y visualizadas.</li>
+              <li>Diseño coherente con identidad visual.</li>
+              <li>Responsive en todos los breakpoints.</li>
+              <li>Links internos funcionales.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HU04: Planes/Precios -->
+        <div class="user-story-detail">
+          <h4>HU04: Planes/Precios</h4>
+          <p class="story-text"><em>Como visitante<br>
+          Quiero comparar planes gratuitos y de pago<br>
+          Para decidir si me registro.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Visualización de planes:</strong>
+                <ul>
+                  <li>Página <code>/precios</code> con tabla comparativa o cards.</li>
+                  <li>Mínimo 3 planes: Gratis, Básico, Premium.</li>
+                  <li>Cada plan muestra: precio, features incluidas, limitaciones.</li>
+                </ul>
+              </li>
+              <li><strong>Comparación:</strong>
+                <ul>
+                  <li>Features destacadas con checkmarks ✓ o X.</li>
+                  <li>Plan recomendado visualmente destacado.</li>
+                </ul>
+              </li>
+              <li><strong>CTA:</strong>
+                <ul>
+                  <li>Botones "Comenzar" o "Elegir plan" en cada card.</li>
+                  <li>Link a registro con plan preseleccionado.</li>
+                </ul>
+              </li>
+              <li><strong>Responsividad:</strong>
+                <ul>
+                  <li>En móvil: cards apiladas verticalmente.</li>
+                  <li>En desktop: layout horizontal.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Tabla de precios completa y actualizada.</li>
+              <li>Links a registro funcionales.</li>
+              <li>Pruebas A/B documentadas (opcional).</li>
+              <li>Precios claramente visibles sin ambigüedad.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HU05: Blog / Artículos -->
+        <div class="user-story-detail">
+          <h4>HU05: Blog / Artículos</h4>
+          <p class="story-text"><em>Como visitante<br>
+          Quiero acceder a contenido educativo de finanzas<br>
+          Para aprender y confiar en la aplicación.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Listado de artículos:</strong>
+                <ul>
+                  <li>Página <code>/blog</code> con grid de artículos.</li>
+                  <li>Cada card muestra: imagen, título, extracto, fecha, autor.</li>
+                  <li>Paginación o infinite scroll para más de 12 artículos.</li>
+                </ul>
+              </li>
+              <li><strong>Vista de artículo:</strong>
+                <ul>
+                  <li>Página <code>/blog/:slug</code> con contenido completo.</li>
+                  <li>Formato legible con tipografía optimizada.</li>
+                  <li>Botones de compartir en redes sociales.</li>
+                </ul>
+              </li>
+              <li><strong>SEO:</strong>
+                <ul>
+                  <li>Meta tags (title, description, OG tags).</li>
+                  <li>URLs amigables (slugs).</li>
+                </ul>
+              </li>
+              <li><strong>Performance:</strong>
+                <ul>
+                  <li>Imágenes optimizadas con lazy loading.</li>
+                  <li>Carga de artículo ≤ 2 segundos.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Mínimo 5 artículos publicados.</li>
+              <li>CMS integrado (opcional: Strapi, Contentful).</li>
+              <li>RSS feed generado.</li>
+              <li>Artículos indexados en Google.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HU06: Sobre nosotros -->
+        <div class="user-story-detail">
+          <h4>HU06: Sobre nosotros</h4>
+          <p class="story-text"><em>Como visitante<br>
+          Quiero conocer la empresa y el equipo<br>
+          Para sentir confianza.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Contenido de la página:</strong>
+                <ul>
+                  <li>Página <code>/nosotros</code> con misión, visión, valores.</li>
+                  <li>Historia de la empresa o producto.</li>
+                  <li>Sección del equipo con fotos y roles.</li>
+                </ul>
+              </li>
+              <li><strong>Diseño:</strong>
+                <ul>
+                  <li>Layout atractivo con imágenes del equipo.</li>
+                  <li>Tipografía legible y jerarquía clara.</li>
+                </ul>
+              </li>
+              <li><strong>Credibilidad:</strong>
+                <ul>
+                  <li>Links a redes sociales del equipo/empresa.</li>
+                  <li>Certificaciones o logros (opcional).</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Página publicada con contenido completo.</li>
+              <li>Fotos profesionales del equipo.</li>
+              <li>Responsive en todos los dispositivos.</li>
+              <li>Links externos verificados.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HU07: Preguntas frecuentes -->
+        <div class="user-story-detail">
+          <h4>HU07: Preguntas frecuentes (FAQ)</h4>
+          <p class="story-text"><em>Como visitante<br>
+          Quiero resolver dudas rápidas sin contactar soporte<br>
+          Para tomar una decisión informada.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Estructura de FAQ:</strong>
+                <ul>
+                  <li>Página <code>/faq</code> con mínimo 10 preguntas.</li>
+                  <li>Accordion o lista expandible para cada pregunta.</li>
+                  <li>Preguntas agrupadas por categorías.</li>
+                </ul>
+              </li>
+              <li><strong>Búsqueda:</strong>
+                <ul>
+                  <li>Barra de búsqueda para filtrar preguntas.</li>
+                  <li>Resultados instantáneos mientras se escribe.</li>
+                </ul>
+              </li>
+              <li><strong>Contenido:</strong>
+                <ul>
+                  <li>Respuestas claras y concisas.</li>
+                  <li>Links a documentación adicional si es necesario.</li>
+                </ul>
+              </li>
+              <li><strong>CTA:</strong>
+                <ul>
+                  <li>Link a contacto si no encuentra respuesta.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>FAQ completo con preguntas más comunes.</li>
+              <li>Accordion funcional en todos los navegadores.</li>
+              <li>Búsqueda operativa.</li>
+              <li>Actualizable fácilmente (JSON o CMS).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HU08: Contacto / Soporte -->
+        <div class="user-story-detail">
+          <h4>HU08: Contacto / Soporte</h4>
+          <p class="story-text"><em>Como visitante<br>
+          Quiero enviar un mensaje al soporte mediante un formulario<br>
+          Para recibir ayuda.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Formulario de contacto:</strong>
+                <ul>
+                  <li>Página <code>/contacto</code> con campos: Nombre, Email, Asunto, Mensaje.</li>
+                  <li>Validación en tiempo real de campos obligatorios.</li>
+                  <li>Botón "Enviar" deshabilitado hasta que form sea válido.</li>
+                </ul>
+              </li>
+              <li><strong>Envío exitoso:</strong>
+                <ul>
+                  <li>Al enviar, muestra spinner ≤ 3 segundos.</li>
+                  <li>Backend envía email al equipo de soporte.</li>
+                  <li>Usuario recibe toast "Mensaje enviado. Responderemos pronto".</li>
+                  <li>Formulario se resetea después de envío exitoso.</li>
+                </ul>
+              </li>
+              <li><strong>Protección:</strong>
+                <ul>
+                  <li>reCAPTCHA o hCaptcha para prevenir spam.</li>
+                  <li>Rate limiting: máx. 3 mensajes por hora por IP.</li>
+                </ul>
+              </li>
+              <li><strong>Alternativas:</strong>
+                <ul>
+                  <li>Email de contacto visible.</li>
+                  <li>Links a redes sociales (opcional).</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Formulario desplegado y funcional.</li>
+              <li>Emails recibidos en bandeja de soporte.</li>
+              <li>CAPTCHA integrado y funcionando.</li>
+              <li>Pruebas de spam realizadas.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HU09: Política y términos -->
+        <div class="user-story-detail">
+          <h4>HU09: Política de privacidad y Términos de servicio</h4>
+          <p class="story-text"><em>Como visitante<br>
+          Quiero leer la documentación legal<br>
+          Para entender mis derechos y deberes.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Páginas legales:</strong>
+                <ul>
+                  <li>Página <code>/privacidad</code> con política de privacidad completa.</li>
+                  <li>Página <code>/terminos</code> con términos y condiciones.</li>
+                  <li>Contenido en lenguaje claro y organizado por secciones.</li>
+                </ul>
+              </li>
+              <li><strong>Cumplimiento legal:</strong>
+                <ul>
+                  <li>Cumple con GDPR (Europa) y CCPA (California).</li>
+                  <li>Información sobre cookies y tracking.</li>
+                  <li>Derechos del usuario (acceso, rectificación, eliminación).</li>
+                </ul>
+              </li>
+              <li><strong>Accesibilidad:</strong>
+                <ul>
+                  <li>Links en footer de todas las páginas.</li>
+                  <li>Tabla de contenidos para navegación rápida.</li>
+                  <li>Última fecha de actualización visible.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Documentos legales revisados por asesor legal (recomendado).</li>
+              <li>Páginas publicadas y accesibles.</li>
+              <li>Links funcionales en footer.</li>
+              <li>Versionado de documentos (registro de cambios).</li>
+            </ul>
+          </div>
+        </div>
 
         <h3>E-2: Acceso y Autenticación</h3>
         <p class="epic">Sistema seguro de registro y acceso a la plataforma</p>
@@ -88,63 +466,692 @@
           sencilla. Incluye formularios de registro, login, recuperación de
           contraseña y validaciones necesarias para proteger las cuentas.
         </p>
-        <ul>
-          <li>
-            <strong>HU10: Registro</strong><br />*Como visitante quiero
-            registrarme en la plataforma para crear una cuenta y acceder a las
-            funcionalidades.*
-          </li>
-          <li>
-            <strong>HU11: Login</strong><br />*Como usuario registrado quiero
-            iniciar sesión para acceder a mi cuenta personal.*
-          </li>
-          <li>
-            <strong>HU12: Recuperar contraseña</strong><br />*Como usuario
-            quiero recuperar mi contraseña si la olvido para poder acceder
-            nuevamente.*
-          </li>
-        </ul>
+
+        <!-- US-1: Sign-up básico -->
+        <div class="user-story-detail">
+          <h4>US-1: Sign-up básico (HU10)</h4>
+          <p class="story-text"><em>Como visitante de la plataforma<br>
+          Quiero crear una cuenta con mis datos personales<br>
+          Para poder ingresar y gestionar mis tareas.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Visualización del formulario:</strong>
+                <ul>
+                  <li>Al acceder a <code>/signup</code> se muestran siempre los campos: Nombres, Apellidos, Edad (numérico ≥ 13), Correo electrónico, Contraseña (≥ 8 caracteres, mínimo 1 mayúscula, número y carácter especial) y Confirmar contraseña.</li>
+                </ul>
+              </li>
+              <li><strong>Validación en tiempo real:</strong>
+                <ul>
+                  <li>El botón <em>Registrarse</em> permanece deshabilitado hasta que todos los campos sean válidos.</li>
+                  <li>Contraseña ≥ 8 caracteres, al menos una mayúscula, una minúscula y un número.</li>
+                  <li>Confirmar contraseña coincide.</li>
+                  <li>Edad contiene solo dígitos y es ≥ 13.</li>
+                  <li>Los mensajes de error se anuncian en una región tooltip y desaparecen al corregir el campo.</li>
+                </ul>
+              </li>
+              <li><strong>Envío exitoso:</strong>
+                <ul>
+                  <li>Al presionar <em>Registrarse</em> con datos válidos se muestra un spinner de procesamiento (máx. 3 s).</li>
+                  <li>El backend responde HTTP 201 con el id del nuevo usuario.</li>
+                  <li>Se emite un toast "Cuenta creada con éxito" y el usuario es redirigido a <code>/login</code> en ≤ 500 ms.</li>
+                </ul>
+              </li>
+              <li><strong>Manejo de errores de servidor:</strong>
+                <ul>
+                  <li>Si el correo ya existe, el backend devuelve 409 Conflict y el front muestra "Este correo ya está registrado" sin recargar la página.</li>
+                  <li>Cualquier error 5xx muestra un estado genérico "Intenta de nuevo más tarde" y se registra en la consola sólo en modo dev.</li>
+                </ul>
+              </li>
+              <li><strong>Persistencia segura:</strong>
+                <ul>
+                  <li>El usuario se guarda en MongoDB con contraseña hasheada usando bcrypt (mín. 10 salt rounds).</li>
+                  <li>Se registra la fecha de creación (createdAt) en formato ISO-8601.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Todos los criterios de aceptación se cumplen.</li>
+              <li>Documentación JSDoc añadida; README actualizado con el flujo de registro.</li>
+              <li>Comprobado comportamiento responsivo en 320 px, 768 px y 1024 px mediante Chrome DevTools.</li>
+              <li>Despliegue automático en Vercel (frontend) y Render (API) exitoso.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- US-2: Login / Logout -->
+        <div class="user-story-detail">
+          <h4>US-2: Login / Logout (HU11)</h4>
+          <p class="story-text"><em>Como usuario registrado<br>
+          Quiero iniciar y cerrar sesión de forma segura<br>
+          Para acceder a mis tareas y proteger mi información.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Visualización del formulario:</strong>
+                <ul>
+                  <li>Al acceder a <code>/login</code> se muestran los campos Correo electrónico y Contraseña más el enlace "¿Olvidaste tu contraseña?".</li>
+                </ul>
+              </li>
+              <li><strong>Validación en tiempo real:</strong>
+                <ul>
+                  <li>El botón <em>Iniciar sesión</em> permanece deshabilitado hasta que los campos sean válidos: Correo con formato RFC 5322 y Contraseña.</li>
+                  <li>Mensajes de error se anuncian en una región <code>aria-live="polite"</code> y desaparecen al corregir el campo.</li>
+                </ul>
+              </li>
+              <li><strong>Autenticación exitosa:</strong>
+                <ul>
+                  <li>Al presionar <em>Iniciar sesión</em> con datos válidos se muestra un spinner de procesamiento (≤ 3 s).</li>
+                  <li>El backend responde HTTP 200 con un JSON Web Token válido 2 h.</li>
+                  <li>El token se almacena de forma segura (HttpOnly cookie o secure localStorage).</li>
+                  <li>El usuario es redirigido a <code>/dashboard</code> en ≤ 500 ms y se muestra un saludo "Hola, Nombre".</li>
+                </ul>
+              </li>
+              <li><strong>Persistencia de sesión:</strong>
+                <ul>
+                  <li>Al recargar la página, si el token no ha expirado, el usuario permanece en <code>/dashboard</code>.</li>
+                  <li>Acceder a rutas protegidas sin token redirige a <code>/login</code>.</li>
+                </ul>
+              </li>
+              <li><strong>Logout:</strong>
+                <ul>
+                  <li>Al seleccionar <em>Cerrar sesión</em> el token se elimina y la cabecera Authorization se limpia.</li>
+                  <li>El usuario vuelve a <code>/inicio</code> y se muestra un toast "Sesión cerrada correctamente".</li>
+                </ul>
+              </li>
+              <li><strong>Manejo de errores:</strong>
+                <ul>
+                  <li>Credenciales incorrectas → 401 Unauthorized y mensaje "Correo o contraseña inválidos".</li>
+                  <li>Cuenta bloqueada → 423 Locked y mensaje "Cuenta temporalmente bloqueada".</li>
+                  <li>Errores 5xx → mensaje "Inténtalo de nuevo más tarde" (solo log en consola en modo dev).</li>
+                </ul>
+              </li>
+              <li><strong>Seguridad adicional:</strong>
+                <ul>
+                  <li>Se limita a 5 intentos fallidos por IP cada 10 min (respuesta 429 Too Many Requests).</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Todos los criterios de aceptación se cumplen.</li>
+              <li>Documentación JSDoc añadida; README actualizado con el flujo de login/logout.</li>
+              <li>Comprobado comportamiento responsivo en 320 px, 768 px y 1024 px.</li>
+              <li>Despliegue automático en Vercel (frontend) y Render (API) exitoso; rutas /login y /logout accesibles vía HTTPS.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- US-3: Recuperar contraseña -->
+        <div class="user-story-detail">
+          <h4>US-3: Recuperar contraseña (HU12)</h4>
+          <p class="story-text"><em>Como usuario que olvidó su contraseña<br>
+          Quiero restablecerla mediante un enlace enviado a mi correo<br>
+          Para volver a acceder sin crear una cuenta nueva.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Solicitud de recuperación:</strong>
+                <ul>
+                  <li>En <code>/forgot-password</code> se muestra un único campo Correo electrónico con botón <em>Enviar enlace</em>.</li>
+                  <li>Al ingresar un correo válido se muestra un spinner (≤ 3 s).</li>
+                  <li>El backend responde HTTP 200 y envía un mail con enlace de restablecimiento válido 1 hora y de un solo uso.</li>
+                  <li>Se muestra un toast "Revisa tu correo para continuar".</li>
+                </ul>
+              </li>
+              <li><strong>Link de restablecimiento:</strong>
+                <ul>
+                  <li>El enlace incluye token seguro (<code>/reset?token=XYZ</code>).</li>
+                  <li>Si el token está vigente, lleva a un formulario con Nueva contraseña y Confirmar contraseña.</li>
+                  <li>Si el token expiró o fue usado, se muestra mensaje "Enlace inválido o caducado" y opción para reenviarlo.</li>
+                </ul>
+              </li>
+              <li><strong>Validación de nueva contraseña:</strong>
+                <ul>
+                  <li>Contraseña ≥ 8 caracteres, con mayúscula, minúscula y número.</li>
+                  <li>Confirmar contraseña debe coincidir.</li>
+                  <li>Mensajes de error accesibles via <code>aria-live="polite"</code>.</li>
+                </ul>
+              </li>
+              <li><strong>Restablecimiento exitoso:</strong>
+                <ul>
+                  <li>Al enviar datos válidos backend responde HTTP 200 y actualiza la contraseña (hash bcrypt, 10 salt rounds).</li>
+                  <li>El token se invalida inmediatamente.</li>
+                  <li>Se emite un toast "Contraseña actualizada" y se redirige a <code>/login</code> en ≤ 500 ms.</li>
+                </ul>
+              </li>
+              <li><strong>Manejo de errores:</strong>
+                <ul>
+                  <li>Correo no registrado → 202 Accepted (respuesta genérica para no filtrar cuentas).</li>
+                  <li>Errores 5xx → mensaje "Inténtalo de nuevo más tarde" (log solo en modo dev).</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Todos los criterios de aceptación se cumplen.</li>
+              <li>Documentación JSDoc añadida; README incluye el flujo de recuperación.</li>
+              <li>Verificado diseño responsivo en 320 px, 768 px y 1024 px.</li>
+              <li>Correo de prueba recibido en un buzón real (ej.: Mailtrap) y enlace operativo.</li>
+              <li>Despliegue en Vercel (front) y Render (API) actualizado; rutas /forgot-password y /reset accesibles vía HTTPS.</li>
+            </ul>
+          </div>
+        </div>
 
         <h2>Zona Privada</h2>
 
-        <h3>E-3: Finanzas Personales Básicas</h3>
+        <h3>E-3: Gestión de Tareas</h3>
         <p class="epic">
-          Herramientas esenciales para gestionar finanzas diarias
+          Herramientas esenciales para gestionar tareas diarias
         </p>
         <p class="epic-desc">
           Esta épica proporciona las funcionalidades core para que los usuarios
-          comiencen a controlar sus finanzas inmediatamente después del
-          registro. Incluye un dashboard resumen, registro manual de
-          transacciones, importación automática desde archivos, gestión de
-          cuentas y visualización en calendario.
+          comiencen a organizar sus tareas inmediatamente después del
+          registro. Incluye creación, listado, edición y eliminación de tareas.
         </p>
-        <ul>
-          <li>
-            <strong>HU13: Dashboard</strong><br />*Como usuario quiero ver un
-            panel con mi resumen financiero para tener una visión general de mi
-            estado actual.*
-          </li>
-          <li>
-            <strong>HU14: Registrar transacciones</strong><br />*Como usuario
-            quiero añadir ingresos y egresos para llevar control de mis
-            finanzas.*
-          </li>
-          <li>
-            <strong>HU15: Importar transacciones desde CSV/Excel</strong
-            ><br />*Como usuario quiero cargar mis movimientos bancarios
-            automáticamente para ahorrar tiempo.*
-          </li>
-          <li>
-            <strong>HU16: Gestión de cuentas</strong><br />*Como usuario quiero
-            crear, editar y eliminar cuentas bancarias o tarjetas para organizar
-            mis finanzas.*
-          </li>
-          <li>
-            <strong>HU17: Calendario financiero</strong><br />*Como usuario
-            quiero programar pagos y verlos en un calendario para no olvidar
-            fechas importantes.*
-          </li>
-        </ul>
+
+        <!-- US-4: Crear tarea -->
+        <div class="user-story-detail">
+          <h4>US-4: Crear tarea (HU14)</h4>
+          <p class="story-text"><em>Como usuario autenticado<br>
+          Quiero registrar nuevas tareas con título, detalle, fecha y hora<br>
+          Para organizar mis pendientes.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Visualización del formulario:</strong>
+                <ul>
+                  <li>En <code>/tasks/new</code> se muestran los campos: Título (obligatorio, máx. 50 car.), Detalle (opcional, máx. 500 car.), Fecha, Hora y Estado (Por hacer, Haciendo, Hecho).</li>
+                </ul>
+              </li>
+              <li><strong>Validación en tiempo real:</strong>
+                <ul>
+                  <li>El botón <em>Guardar</em> permanece deshabilitado hasta que Título, Fecha, Hora y Estado sean válidos.</li>
+                  <li>Mensajes de error se anuncian en <code>aria-live="polite"</code> y desaparecen al corregir el campo.</li>
+                </ul>
+              </li>
+              <li><strong>Creación exitosa:</strong>
+                <ul>
+                  <li>Al pulsar <em>Guardar</em> con datos válidos se muestra un spinner ≤ 2 s.</li>
+                  <li>El backend responde HTTP 201 con el id de la nueva tarea.</li>
+                  <li>La tarea aparece inmediatamente en la lista/tablero del usuario en ≤ 300 ms.</li>
+                </ul>
+              </li>
+              <li><strong>Persistencia segura:</strong>
+                <ul>
+                  <li>La tarea se guarda en MongoDB con userId, createdAt (ISO-8601) y status.</li>
+                </ul>
+              </li>
+              <li><strong>Manejo de errores:</strong>
+                <ul>
+                  <li>Campos obligatorios vacíos → mensaje "Completa este campo" sin recargar la página.</li>
+                  <li>Error 5xx → mensaje "No pudimos guardar tu tarea, inténtalo de nuevo" (log solo en modo dev).</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Todos los criterios de aceptación anteriores se cumplen.</li>
+              <li>Documentación JSDoc añadida y README actualizado con el flujo de creación de tareas.</li>
+              <li>Verificado diseño responsivo (320 px, 768 px, 1024 px).</li>
+              <li>Despliegue actualizado en Vercel (front) y Render (API); ruta /tasks/new accesible vía HTTPS.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- US-5: Listar tareas -->
+        <div class="user-story-detail">
+          <h4>US-5: Listar tareas (HU13)</h4>
+          <p class="story-text"><em>Como usuario autenticado<br>
+          Quiero ver todas mis tareas en un listado o tablero<br>
+          Para conocer rápidamente el estado de mis actividades.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Visualización inicial:</strong>
+                <ul>
+                  <li>Al entrar a <code>/tasks</code> se solicita GET /tasks y se muestran solo las tareas del usuario en ≤ 500 ms.</li>
+                  <li>Cada tarjeta incluye Título, Fecha/Hora y Estado (Por hacer, Haciendo, Hecho).</li>
+                </ul>
+              </li>
+              <li><strong>Agrupación:</strong>
+                <ul>
+                  <li>Por defecto las tareas se agrupan en columnas Kanban según estado.</li>
+                </ul>
+              </li>
+              <li><strong>Orden y actualización en vivo:</strong>
+                <ul>
+                  <li>En la vista lista las tareas se ordenan por Fecha ascendente.</li>
+                  <li>Si se crea, edita o elimina una tarea, el listado se actualiza sin recargar la página.</li>
+                </ul>
+              </li>
+              <li><strong>Responsividad:</strong>
+                <ul>
+                  <li>En pantallas ≤ 768 px la vista lista se muestra por defecto; las columnas Kanban son horizontales scrollables.</li>
+                </ul>
+              </li>
+              <li><strong>Manejo de errores:</strong>
+                <ul>
+                  <li>Si el token expiró → redirección a <code>/login</code> con mensaje "Inicia sesión de nuevo".</li>
+                  <li>Errores 5xx muestran toast "No pudimos obtener tus tareas, inténtalo más tarde".</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Todos los criterios de aceptación se cumplen.</li>
+              <li>Código y componentes documentados con JSDoc; README describe la vista lista/tablero.</li>
+              <li>Comportamiento responsivo validado en 320 px, 768 px y 1024 px.</li>
+              <li>Despliegue en Vercel (front) y Render (API) actualizado; endpoint GET /tasks operativo vía HTTPS.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- US-6: Editar tarea -->
+        <div class="user-story-detail">
+          <h4>US-6: Editar tarea</h4>
+          <p class="story-text"><em>Como usuario autenticado<br>
+          Quiero modificar la información de una tarea existente<br>
+          Para mantenerla actualizada.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Acceso a la edición:</strong>
+                <ul>
+                  <li>En el tablero/lista, cada tarjeta de tarea muestra un ícono de editar.</li>
+                  <li>Al hacer clic, se abre un formulario modal con los campos precargados: Título, Detalle, Fecha, Hora y Estado.</li>
+                </ul>
+              </li>
+              <li><strong>Validación en tiempo real:</strong>
+                <ul>
+                  <li>El botón <em>Actualizar</em> permanece deshabilitado hasta que los campos obligatorios (Título, Fecha, Hora) sean válidos.</li>
+                  <li>Mensajes de error accesibles aparecen bajo los campos inválidos y se anuncian en <code>aria-live="polite"</code>.</li>
+                </ul>
+              </li>
+              <li><strong>Edición exitosa:</strong>
+                <ul>
+                  <li>Al pulsar <em>Actualizar</em> con datos válidos se muestra un spinner ≤ 2 s.</li>
+                  <li>El backend responde HTTP 200 con el objeto de tarea actualizado.</li>
+                  <li>La tarjeta de la tarea se actualiza en la lista sin recargar la página y refleja el nuevo estado.</li>
+                  <li>Se emite un toast "Tarea actualizada".</li>
+                </ul>
+              </li>
+              <li><strong>Persistencia segura:</strong>
+                <ul>
+                  <li>La tarea se guarda en MongoDB con los nuevos valores y campo updatedAt en formato ISO-8601.</li>
+                </ul>
+              </li>
+              <li><strong>Manejo de errores:</strong>
+                <ul>
+                  <li>Intentar cambiar la fecha a una anterior al día actual devuelve 400 Bad Request y mensaje "La fecha debe ser futura".</li>
+                  <li>Errores 5xx muestran mensaje "No pudimos actualizar tu tarea" (registra en consola solo en modo dev).</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Todos los criterios de aceptación se cumplen.</li>
+              <li>Documentación JSDoc añadida; el README refleja el flujo de edición.</li>
+              <li>Comportamiento responsivo validado en 320 px, 768 px y 1024 px sin desbordes.</li>
+              <li>Despliegue en Vercel (frontend) y Render (API) actualizado; endpoint PUT /tasks/:id operativo por HTTPS.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- US-7: Eliminar tarea -->
+        <div class="user-story-detail">
+          <h4>US-7: Eliminar tarea</h4>
+          <p class="story-text"><em>Como usuario autenticado<br>
+          Quiero eliminar tareas que ya no necesito<br>
+          Para mantener mi lista ordenada.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Acceso a la eliminación:</strong>
+                <ul>
+                  <li>Cada tarjeta de tarea muestra un ícono de eliminar.</li>
+                </ul>
+              </li>
+              <li><strong>Confirmación:</strong>
+                <ul>
+                  <li>Al activar <em>Eliminar</em> se abre un modal de confirmación con el mensaje: "¿Seguro que deseas borrar esta tarea?" y opciones Cancelar / Eliminar definitivamente.</li>
+                </ul>
+              </li>
+              <li><strong>Eliminación exitosa:</strong>
+                <ul>
+                  <li>Al pulsar <em>Eliminar definitivamente</em> se muestra un spinner ≤ 2 s.</li>
+                  <li>El backend responde HTTP 204 (sin contenido).</li>
+                  <li>La tarjeta desaparece de la lista sin recargar la página.</li>
+                  <li>Se emite un toast "Tarea eliminada".</li>
+                </ul>
+              </li>
+              <li><strong>Cancelación:</strong>
+                <ul>
+                  <li>Pulsar <em>Cancelar</em> cierra el modal sin cambios en la lista.</li>
+                </ul>
+              </li>
+              <li><strong>Persistencia:</strong>
+                <ul>
+                  <li>La tarea se borra de MongoDB y ya no aparece en peticiones posteriores a GET /tasks.</li>
+                </ul>
+              </li>
+              <li><strong>Manejo de errores:</strong>
+                <ul>
+                  <li>Si la tarea no existe → 404 Not Found y mensaje "La tarea ya no está disponible".</li>
+                  <li>Errores 5xx → mensaje "No pudimos eliminar la tarea, inténtalo más tarde" (log solo en modo dev).</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Todos los criterios de aceptación se cumplen.</li>
+              <li>Documentación JSDoc añadida; README actualizado con el flujo de eliminación.</li>
+              <li>Comportamiento responsivo validado en 320 px, 768 px y 1024 px.</li>
+              <li>Despliegue en Vercel (front) y Render (API) actualizado; endpoint DELETE /tasks/:id operativo vía HTTPS.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HU13: Dashboard -->
+        <div class="user-story-detail">
+          <h4>HU13: Dashboard financiero</h4>
+          <p class="story-text"><em>Como usuario autenticado<br>
+          Quiero ver un panel con mi resumen financiero<br>
+          Para tener una visión general de mi estado actual.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Visualización del dashboard:</strong>
+                <ul>
+                  <li>Al acceder a <code>/dashboard</code> se muestra resumen con: saldo total, ingresos del mes, gastos del mes, balance.</li>
+                  <li>Widgets con gráficos de resumen (últimos 7 días, último mes).</li>
+                  <li>Lista de transacciones recientes (últimas 5-10).</li>
+                  <li>Accesos rápidos a: Nueva transacción, Ver todas, Reportes.</li>
+                </ul>
+              </li>
+              <li><strong>Actualización en tiempo real:</strong>
+                <ul>
+                  <li>Dashboard se actualiza automáticamente al crear/editar transacciones.</li>
+                  <li>No requiere recargar la página.</li>
+                </ul>
+              </li>
+              <li><strong>Carga de datos:</strong>
+                <ul>
+                  <li>Skeleton loader durante carga ≤ 2 segundos.</li>
+                  <li>GET /api/dashboard responde con datos agregados.</li>
+                </ul>
+              </li>
+              <li><strong>Estado vacío:</strong>
+                <ul>
+                  <li>Si no hay transacciones, mostrar mensaje de bienvenida y CTA "Agregar primera transacción".</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Dashboard funcional con datos reales del usuario.</li>
+              <li>Gráficos renderizados correctamente.</li>
+              <li>Responsive en 320px, 768px, 1024px.</li>
+              <li>Performance: carga ≤ 2 segundos.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HU14: Registrar transacciones -->
+        <div class="user-story-detail">
+          <h4>HU14: Registrar transacciones manualmente</h4>
+          <p class="story-text"><em>Como usuario autenticado<br>
+          Quiero registrar mis ingresos y gastos manualmente<br>
+          Para llevar el control de mis finanzas.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Formulario de nueva transacción:</strong>
+                <ul>
+                  <li>Página <code>/transactions/new</code> o modal desde dashboard.</li>
+                  <li>Campos obligatorios: Tipo (ingreso/gasto), Monto (numérico positivo), Categoría (dropdown), Fecha, Descripción (máx. 200 caracteres).</li>
+                  <li>Campos opcionales: Cuenta asociada, Etiquetas (tags).</li>
+                  <li>Botón "Guardar" y "Cancelar".</li>
+                </ul>
+              </li>
+              <li><strong>Validación en tiempo real:</strong>
+                <ul>
+                  <li>Monto debe ser > 0 y máximo 2 decimales.</li>
+                  <li>Fecha no puede ser futura (warning si > hoy).</li>
+                  <li>Descripción obligatoria si monto > 1000.</li>
+                  <li>Mensajes de error aparecen bajo cada campo.</li>
+                </ul>
+              </li>
+              <li><strong>Categorías predefinidas:</strong>
+                <ul>
+                  <li>Ingresos: Salario, Freelance, Inversiones, Otro.</li>
+                  <li>Gastos: Alimentación, Transporte, Entretenimiento, Salud, Servicios, Otro.</li>
+                  <li>Posibilidad de crear categoría personalizada.</li>
+                </ul>
+              </li>
+              <li><strong>Guardado exitoso:</strong>
+                <ul>
+                  <li>Al guardar, muestra spinner ≤ 2 segundos.</li>
+                  <li>Backend responde HTTP 201 con id de transacción.</li>
+                  <li>Toast "Transacción registrada correctamente".</li>
+                  <li>Redirige a <code>/transactions</code> o actualiza lista en dashboard.</li>
+                  <li>Transacción aparece inmediatamente en lista ordenada por fecha (más reciente primero).</li>
+                </ul>
+              </li>
+              <li><strong>Persistencia:</strong>
+                <ul>
+                  <li>Transacción se guarda en MongoDB con: userId, type, amount, category, date, description, account, tags, createdAt.</li>
+                  <li>Actualiza balance de cuenta asociada automáticamente.</li>
+                </ul>
+              </li>
+              <li><strong>Manejo de errores:</strong>
+                <ul>
+                  <li>Campos vacíos → "Campo obligatorio".</li>
+                  <li>Monto inválido → "Ingresa un monto válido".</li>
+                  <li>Error de servidor → "No pudimos guardar la transacción, intenta de nuevo".</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Formulario funcional y validado.</li>
+              <li>Transacciones guardadas correctamente en base de datos.</li>
+              <li>Balance de cuentas se actualiza automáticamente.</li>
+              <li>Dashboard refleja nuevas transacciones inmediatamente.</li>
+              <li>Responsive en 320px, 768px, 1024px.</li>
+              <li>Tests unitarios del endpoint POST /api/transactions.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HU15: Importar transacciones CSV/Excel -->
+        <div class="user-story-detail">
+          <h4>HU15: Importar transacciones desde CSV/Excel</h4>
+          <p class="story-text"><em>Como usuario autenticado<br>
+          Quiero cargar mis movimientos bancarios automáticamente<br>
+          Para ahorrar tiempo.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Interfaz de importación:</strong>
+                <ul>
+                  <li>Página <code>/transactions/import</code> con área de drag & drop.</li>
+                  <li>Soporta archivos .csv, .xlsx, .xls (máx. 5MB).</li>
+                  <li>Preview de las primeras 10 filas antes de importar.</li>
+                </ul>
+              </li>
+              <li><strong>Mapeo de columnas:</strong>
+                <ul>
+                  <li>Usuario puede mapear columnas del archivo a campos: Fecha, Descripción, Monto, Categoría, Cuenta.</li>
+                  <li>Detección automática de formato común de bancos.</li>
+                </ul>
+              </li>
+              <li><strong>Validación:</strong>
+                <ul>
+                  <li>Valida formato de fecha, monto (números).</li>
+                  <li>Muestra errores por fila con opción de corregir o saltar.</li>
+                  <li>Previene duplicados basados en fecha + monto + descripción.</li>
+                </ul>
+              </li>
+              <li><strong>Importación exitosa:</strong>
+                <ul>
+                  <li>Muestra progreso con barra (ej: "Importando 50/100 transacciones").</li>
+                  <li>POST /api/transactions/import procesa en batch.</li>
+                  <li>Toast "X transacciones importadas correctamente".</li>
+                  <li>Redirige a <code>/transactions</code> con transacciones importadas visibles.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Importación funcional con CSV y Excel.</li>
+              <li>Validaciones robustas implementadas.</li>
+              <li>Pruebas con archivos de diferentes bancos.</li>
+              <li>Manejo de errores documentado.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HU16: Gestión de cuentas -->
+        <div class="user-story-detail">
+          <h4>HU16: Gestión de cuentas bancarias</h4>
+          <p class="story-text"><em>Como usuario autenticado<br>
+          Quiero crear, editar y eliminar cuentas bancarias o tarjetas<br>
+          Para organizar mis finanzas.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Listar cuentas:</strong>
+                <ul>
+                  <li>Página <code>/accounts</code> muestra cards con: nombre, tipo (banco/tarjeta), saldo actual, moneda.</li>
+                  <li>Botón "Agregar cuenta" visible.</li>
+                </ul>
+              </li>
+              <li><strong>Crear cuenta:</strong>
+                <ul>
+                  <li>Modal o página con form: Nombre, Tipo (Cuenta bancaria/Tarjeta/Efectivo), Saldo inicial, Moneda.</li>
+                  <li>Validación: nombre obligatorio, saldo numérico.</li>
+                  <li>POST /api/accounts crea cuenta y responde 201.</li>
+                </ul>
+              </li>
+              <li><strong>Editar cuenta:</strong>
+                <ul>
+                  <li>Al hacer clic en cuenta, abre modal con datos precargados.</li>
+                  <li>Permite editar nombre, tipo, saldo.</li>
+                  <li>PUT /api/accounts/:id actualiza cuenta.</li>
+                </ul>
+              </li>
+              <li><strong>Eliminar cuenta:</strong>
+                <ul>
+                  <li>Modal de confirmación "¿Eliminar cuenta X?"</li>
+                  <li>DELETE /api/accounts/:id responde 204.</li>
+                  <li>Transacciones asociadas se mantienen pero sin cuenta asignada.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>CRUD completo de cuentas funcional.</li>
+              <li>Validaciones en front y back.</li>
+              <li>Pruebas con múltiples cuentas.</li>
+              <li>Documentación de API actualizada.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HU17: Calendario financiero -->
+        <div class="user-story-detail">
+          <h4>HU17: Calendario financiero</h4>
+          <p class="story-text"><em>Como usuario autenticado<br>
+          Quiero programar pagos y verlos en un calendario<br>
+          Para no olvidar fechas importantes.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Vista de calendario:</strong>
+                <ul>
+                  <li>Página <code>/calendar</code> con vista mensual (librería: FullCalendar, react-big-calendar).</li>
+                  <li>Muestra pagos programados con colores según estado: Pendiente, Pagado, Vencido.</li>
+                  <li>Click en día abre modal para crear pago.</li>
+                </ul>
+              </li>
+              <li><strong>Crear pago programado:</strong>
+                <ul>
+                  <li>Form: Descripción, Monto, Fecha, Recurrencia (Una vez/Mensual/Anual).</li>
+                  <li>POST /api/scheduled-payments crea recordatorio.</li>
+                </ul>
+              </li>
+              <li><strong>Notificaciones:</strong>
+                <ul>
+                  <li>Sistema envía notificación 1 día antes de fecha de pago (email o push).</li>
+                  <li>En dashboard aparece sección "Pagos próximos" (próximos 7 días).</li>
+                </ul>
+              </li>
+              <li><strong>Marcar como pagado:</strong>
+                <ul>
+                  <li>Click en pago → modal con opciones "Marcar pagado" o "Editar".</li>
+                  <li>Al marcar pagado, crea transacción automáticamente.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Calendario funcional con pagos programados.</li>
+              <li>CRUD de pagos operativo.</li>
+              <li>Notificaciones enviadas correctamente.</li>
+              <li>Recurrencias calculadas bien.</li>
+            </ul>
+          </div>
+        </div>
 
         <h3>E-4: Análisis y Control Avanzado</h3>
         <p class="epic">
@@ -156,22 +1163,303 @@
           visuales, definición de metas personalizadas y un agente de IA que
           proporciona sugerencias basadas en el comportamiento del usuario.
         </p>
-        <ul>
-          <li>
-            <strong>HU18: Reportes y estadísticas</strong><br />*Como usuario
-            quiero visualizar gráficos interactivos de gastos e ingresos para
-            analizar mis hábitos financieros.*
-          </li>
-          <li>
-            <strong>HU19: Metas financieras</strong><br />*Como usuario quiero
-            crear metas de ahorro o inversión para motivarme a cumplirlas.*
-          </li>
-          <li>
-            <strong>HU20: Recomendaciones del Agente IA</strong><br />*Como
-            usuario quiero recibir sugerencias inteligentes para mejorar mi
-            ahorro o inversión.*
-          </li>
-        </ul>
+
+        <!-- HU18: Reportes y estadísticas -->
+        <div class="user-story-detail">
+          <h4>HU18: Reportes y estadísticas</h4>
+          <p class="story-text"><em>Como usuario autenticado<br>
+          Quiero visualizar gráficos interactivos de gastos e ingresos<br>
+          Para analizar mis hábitos financieros.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Página de reportes:</strong>
+                <ul>
+                  <li>Ruta <code>/reports</code> con múltiples gráficos.</li>
+                  <li>Filtros: Rango de fechas (último mes, últimos 3 meses, año actual, personalizado).</li>
+                  <li>Filtro por cuenta bancaria (todas o específica).</li>
+                </ul>
+              </li>
+              <li><strong>Gráficos disponibles:</strong>
+                <ul>
+                  <li>Gráfico de torta: Gastos por categoría.</li>
+                  <li>Gráfico de barras: Ingresos vs Gastos por mes.</li>
+                  <li>Gráfico de línea: Evolución de saldo en el tiempo.</li>
+                  <li>Top 5 categorías con mayor gasto.</li>
+                </ul>
+              </li>
+              <li><strong>Interactividad:</strong>
+                <ul>
+                  <li>Hover en gráfico muestra detalles (monto, porcentaje).</li>
+                  <li>Click en categoría filtra transacciones de esa categoría.</li>
+                </ul>
+              </li>
+              <li><strong>Exportar:</strong>
+                <ul>
+                  <li>Botón "Exportar PDF" genera reporte descargable.</li>
+                  <li>Botón "Exportar Excel" descarga datos en .xlsx.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Todos los gráficos renderizados correctamente.</li>
+              <li>Filtros funcionales y reactivos.</li>
+              <li>Exportación a PDF y Excel operativa.</li>
+              <li>Librerías: Chart.js o Recharts integradas.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HU19: Metas financieras -->
+        <div class="user-story-detail">
+          <h4>HU19: Metas financieras</h4>
+          <p class="story-text"><em>Como usuario autenticado<br>
+          Quiero crear metas de ahorro o inversión<br>
+          Para motivarme a cumplirlas.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Listar metas:</strong>
+                <ul>
+                  <li>Página <code>/goals</code> con cards de metas.</li>
+                  <li>Cada meta muestra: nombre, monto objetivo, monto ahorrado, barra de progreso (%), fecha límite.</li>
+                </ul>
+              </li>
+              <li><strong>Crear meta:</strong>
+                <ul>
+                  <li>Form: Nombre, Descripción, Monto objetivo, Fecha límite, Icono/Categoría (opcional).</li>
+                  <li>POST /api/goals crea meta y responde 201.</li>
+                </ul>
+              </li>
+              <li><strong>Añadir ahorro:</strong>
+                <ul>
+                  <li>Botón "Agregar ahorro" en cada meta.</li>
+                  <li>Modal con monto a aportar.</li>
+                  <li>POST /api/goals/:id/contributions actualiza monto ahorrado.</li>
+                </ul>
+              </li>
+              <li><strong>Notificaciones:</strong>
+                <ul>
+                  <li>Cuando meta alcanza 100%, muestra confetti o animación de éxito.</li>
+                  <li>Notificación: "¡Felicidades! Alcanzaste tu meta X".</li>
+                </ul>
+              </li>
+              <li><strong>Editar/Eliminar meta:</strong>
+                <ul>
+                  <li>Opciones en cada card para editar o eliminar.</li>
+                  <li>PUT /api/goals/:id y DELETE /api/goals/:id.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>CRUD de metas completo.</li>
+              <li>Sistema de contribuciones funcional.</li>
+              <li>Barras de progreso precisas.</li>
+              <li>Animaciones de éxito implementadas.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HU20: Recomendaciones IA -->
+        <div class="user-story-detail">
+          <h4>HU20: Recomendaciones del Agente IA</h4>
+          <p class="story-text"><em>Como usuario autenticado<br>
+          Quiero recibir sugerencias inteligentes<br>
+          Para mejorar mi ahorro o inversión.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Dashboard de IA:</strong>
+                <ul>
+                  <li>Sección en <code>/dashboard</code> o página <code>/insights</code>.</li>
+                  <li>Widget "Recomendaciones para ti" con 3-5 sugerencias.</li>
+                </ul>
+              </li>
+              <li><strong>Versión MVP (reglas básicas):</strong>
+                <ul>
+                  <li>Si gastos > ingresos → "Tus gastos superan tus ingresos este mes. Revisa categorías con mayor gasto".</li>
+                  <li>Si no hay meta creada → "Crea una meta de ahorro para motivarte".</li>
+                  <li>Si categoría X aumentó 20% → "Tus gastos en Restaurantes aumentaron este mes".</li>
+                  <li>Si saldo bajo → "Tu saldo está por debajo de $X. Considera reducir gastos variables".</li>
+                </ul>
+              </li>
+              <li><strong>Interacción:</strong>
+                <ul>
+                  <li>Click en recomendación lleva a sección relevante (ej: reportes, metas).</li>
+                  <li>Botón "Ignorar" descarta recomendación.</li>
+                </ul>
+              </li>
+              <li><strong>Versión futura (IA real):</strong>
+                <ul>
+                  <li>Integración con GPT-4 o modelo propio para análisis predictivo.</li>
+                  <li>Sugerencias personalizadas basadas en patrones históricos.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Motor de reglas básicas implementado.</li>
+              <li>Recomendaciones se generan dinámicamente.</li>
+              <li>UI de recomendaciones atractiva.</li>
+              <li>Plan para IA avanzada documentado.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>E-4: Gestión de Perfil de Usuario</h3>
+        <p class="epic">Personalización y control de cuenta</p>
+        <p class="epic-desc">
+          Esta épica se centra en la gestión completa del perfil de usuario,
+          permitiendo visualizar, editar y eliminar información personal de manera segura.
+        </p>
+
+        <!-- US-8: Ver perfil de usuario -->
+        <div class="user-story-detail">
+          <h4>US-8: Ver perfil de usuario (HU21)</h4>
+          <p class="story-text"><em>Como usuario autenticado<br>
+          Quiero visualizar mi información de perfil<br>
+          Para conocer y verificar mis datos personales.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Visualización del perfil:</strong>
+                <ul>
+                  <li>En <code>/profile</code> se muestran en modo lectura: Nombres, Apellidos, Edad, Correo, y Miembro desde (createdAt).</li>
+                  <li>Se incluyen botones <em>Editar perfil</em> y <em>Eliminar cuenta</em>.</li>
+                  <li>GET /users/me responde 200 con objeto <code>{id, firstName, lastName, age, email, createdAt}</code>.</li>
+                  <li>Skeleton/spinner de carga ≤ 2 s.</li>
+                </ul>
+              </li>
+              <li><strong>Manejo de errores:</strong>
+                <ul>
+                  <li>Token expirado → redirige a <code>/login</code> con mensaje.</li>
+                  <li>5xx → toast 'No pudimos obtener tu perfil' (log solo en dev).</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Todos los criterios de aceptación se cumplen.</li>
+              <li>JSDoc y README documentan el flujo de /profile.</li>
+              <li>Responsivo probado en 320, 768 y 1024 px.</li>
+              <li>Despliegue exitoso en Vercel (front) y Render (API); GET /users/me operativo por HTTPS.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- US-9: Editar perfil de usuario -->
+        <div class="user-story-detail">
+          <h4>US-9: Editar perfil de usuario (HU21)</h4>
+          <p class="story-text"><em>Como usuario autenticado<br>
+          Quiero actualizar mis datos personales<br>
+          Para mantener mi información al día.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Acceso:</strong>
+                <ul>
+                  <li>En <code>/profile</code> → botón <em>Editar</em> abre <code>/profile/edit</code> con datos precargados.</li>
+                  <li>Campos: Nombres, Apellidos, Edad (≥13), Correo (RFC 5322).</li>
+                </ul>
+              </li>
+              <li><strong>Validación:</strong>
+                <ul>
+                  <li><em>Guardar</em> deshabilitado hasta que campos válidos.</li>
+                  <li>Mensajes accesibles via <code>aria-live="polite"</code>.</li>
+                </ul>
+              </li>
+              <li><strong>Edición exitosa:</strong>
+                <ul>
+                  <li>Spinner ≤ 2 s.</li>
+                  <li>PUT /users/me responde 200 con objeto actualizado.</li>
+                  <li>Vista se refresca sin recargar, toast 'Perfil actualizado'.</li>
+                  <li>Campo updatedAt guardado en ISO-8601.</li>
+                </ul>
+              </li>
+              <li><strong>Manejo de errores:</strong>
+                <ul>
+                  <li>Correo ya registrado → 409 Conflict.</li>
+                  <li>Token expirado → redirige a <code>/login</code>.</li>
+                  <li>5xx → toast genérico (log solo en dev).</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Criterios de aceptación completos.</li>
+              <li>Documentación JSDoc + README actualizados.</li>
+              <li>Responsivo validado en 320, 768, 1024 px.</li>
+              <li>Despliegue en Vercel/Render; PUT /users/me operativo por HTTPS.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- US-10: Eliminar cuenta de usuario -->
+        <div class="user-story-detail">
+          <h4>US-10: Eliminar cuenta de usuario (HU21)</h4>
+          <p class="story-text"><em>Como usuario autenticado<br>
+          Quiero eliminar definitivamente mi cuenta<br>
+          Para dejar de usar el servicio y borrar mis datos.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Acceso:</strong>
+                <ul>
+                  <li>En <code>/profile</code> botón 'Eliminar cuenta'.</li>
+                  <li>Modal pide contraseña y escribir ELIMINAR.</li>
+                </ul>
+              </li>
+              <li><strong>Eliminación exitosa:</strong>
+                <ul>
+                  <li>Spinner ≤ 2 s.</li>
+                  <li>DELETE /users/me responde 204.</li>
+                  <li>Se eliminan usuario + tareas asociadas.</li>
+                  <li>Token se borra, redirect a <code>/inicio</code>, toast 'Cuenta eliminada'.</li>
+                </ul>
+              </li>
+              <li><strong>Manejo de errores:</strong>
+                <ul>
+                  <li>Contraseña incorrecta → 401 Unauthorized.</li>
+                  <li>Cuenta no existe → 404 Not Found.</li>
+                  <li>5xx → toast genérico (log solo en dev).</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Todos los criterios de aceptación se cumplen.</li>
+              <li>JSDoc y README actualizados con el flujo de eliminación.</li>
+              <li>Responsivo probado en 320, 768, 1024 px.</li>
+              <li>Despliegue en Vercel/Render; DELETE /users/me operativo vía HTTPS.</li>
+            </ul>
+          </div>
+        </div>
 
         <h3>E-5: Perfil y Soporte en la App</h3>
         <p class="epic">Personalización y asistencia integrada</p>
@@ -181,18 +1469,56 @@
           gestionar perfiles, configuraciones de seguridad y acceso a guías de
           ayuda sin salir de la plataforma.
         </p>
-        <ul>
-          <li>
-            <strong>HU21: Perfil y configuración</strong><br />*Como usuario
-            quiero gestionar mis datos personales, seguridad y notificaciones
-            para personalizar la app.*
-          </li>
-          <li>
-            <strong>HU22: Centro de ayuda interno</strong><br />*Como usuario
-            quiero leer guías rápidas desde la app para resolver dudas sin salir
-            de ella.*
-          </li>
-        </ul>
+
+        <!-- HU22: Centro de ayuda interno -->
+        <div class="user-story-detail">
+          <h4>HU22: Centro de ayuda interno</h4>
+          <p class="story-text"><em>Como usuario autenticado<br>
+          Quiero leer guías rápidas desde la app<br>
+          Para resolver dudas sin salir de ella.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Acceso al centro de ayuda:</strong>
+                <ul>
+                  <li>Link "Ayuda" visible en navbar o menú principal.</li>
+                  <li>Página <code>/help</code> o modal overlay.</li>
+                  <li>Acceso rápido con atajo de teclado (ej: Ctrl+H o Cmd+H).</li>
+                </ul>
+              </li>
+              <li><strong>Contenido de ayuda:</strong>
+                <ul>
+                  <li>Categorías: Primeros pasos, Transacciones, Reportes, Cuenta, Seguridad.</li>
+                  <li>Mínimo 15 artículos con texto + capturas de pantalla.</li>
+                  <li>Buscador de artículos con resultados instantáneos.</li>
+                </ul>
+              </li>
+              <li><strong>Ayuda contextual:</strong>
+                <ul>
+                  <li>Ícono "?" en secciones clave (dashboard, reportes) que abre ayuda específica.</li>
+                  <li>Tooltips informativos en formularios complejos.</li>
+                </ul>
+              </li>
+              <li><strong>Feedback:</strong>
+                <ul>
+                  <li>Al final de cada artículo: "¿Fue útil? 👍 👎"</li>
+                  <li>Si no fue útil, opción de contactar soporte directamente.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Centro de ayuda accesible y funcional.</li>
+              <li>Todos los artículos publicados con imágenes.</li>
+              <li>Buscador operativo.</li>
+              <li>Contenido actualizable fácilmente (CMS o Markdown).</li>
+            </ul>
+          </div>
+        </div>
 
         <h2>Zona Administrativa</h2>
 
@@ -204,23 +1530,174 @@
           Incluye paneles de control de usuarios, monitoreo de métricas del
           sistema y controles de seguridad para dependencias y permisos.
         </p>
-        <ul>
-          <li>
-            <strong>HU23: Panel de administración de usuarios</strong
-            ><br />*Como administrador quiero ver y gestionar usuarios, roles y
-            accesos para mantener la seguridad.*
-          </li>
-          <li>
-            <strong>HU24: Monitoreo y métricas del sistema</strong><br />*Como
-            administrador quiero revisar el uptime, logs y recursos para
-            garantizar estabilidad.*
-          </li>
-          <li>
-            <strong>HU25: Gestión de seguridad</strong><br />*Como administrador
-            quiero ejecutar controles de dependencias y permisos para reducir
-            riesgos de seguridad.*
-          </li>
-        </ul>
+
+        <!-- HU23: Panel de administración de usuarios -->
+        <div class="user-story-detail">
+          <h4>HU23: Panel de administración de usuarios</h4>
+          <p class="story-text"><em>Como administrador<br>
+          Quiero ver y gestionar usuarios, roles y accesos<br>
+          Para mantener la seguridad.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Acceso al panel:</strong>
+                <ul>
+                  <li>Ruta <code>/admin</code> protegida por rol "admin".</li>
+                  <li>Middleware verifica token JWT con claim <code>role: admin</code>.</li>
+                  <li>Usuarios no autorizados reciben 403 Forbidden.</li>
+                </ul>
+              </li>
+              <li><strong>Lista de usuarios:</strong>
+                <ul>
+                  <li>Tabla con columnas: ID, Nombre, Email, Rol, Fecha registro, Estado (Activo/Bloqueado), Acciones.</li>
+                  <li>Paginación (50 usuarios por página).</li>
+                  <li>Búsqueda por nombre o email.</li>
+                  <li>Filtros: Rol (todos/admin/usuario), Estado (todos/activos/bloqueados).</li>
+                </ul>
+              </li>
+              <li><strong>Gestión de usuarios:</strong>
+                <ul>
+                  <li>Botón "Ver detalles" abre modal con info completa del usuario.</li>
+                  <li>Botón "Editar rol" permite cambiar entre admin/usuario.</li>
+                  <li>Botón "Bloquear/Desbloquear" cambia estado de la cuenta.</li>
+                  <li>Botón "Eliminar" con confirmación doble.</li>
+                </ul>
+              </li>
+              <li><strong>Logs de actividad:</strong>
+                <ul>
+                  <li>Sección "Actividad reciente" muestra últimos 20 logins y cambios.</li>
+                  <li>Exportar logs a CSV.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Panel admin completamente funcional.</li>
+              <li>Permisos verificados en back-end.</li>
+              <li>Logs de acciones administrativas registrados.</li>
+              <li>Pruebas de seguridad realizadas.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HU24: Monitoreo y métricas del sistema -->
+        <div class="user-story-detail">
+          <h4>HU24: Monitoreo y métricas del sistema</h4>
+          <p class="story-text"><em>Como administrador<br>
+          Quiero revisar el uptime, logs y recursos<br>
+          Para garantizar estabilidad.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Dashboard de métricas:</strong>
+                <ul>
+                  <li>Ruta <code>/admin/metrics</code> con widgets:</li>
+                  <li>Uptime (%) del servidor en últimos 30 días.</li>
+                  <li>Total de usuarios registrados.</li>
+                  <li>Total de transacciones procesadas.</li>
+                  <li>Uso de base de datos (espacio ocupado).</li>
+                  <li>Errores 5xx en últimas 24 horas.</li>
+                </ul>
+              </li>
+              <li><strong>Gráficos:</strong>
+                <ul>
+                  <li>Gráfico de línea: Nuevos registros por día (últimos 30 días).</li>
+                  <li>Gráfico de barras: Requests por endpoint (top 10).</li>
+                  <li>Gráfico de torta: Distribución de usuarios por plan.</li>
+                </ul>
+              </li>
+              <li><strong>Logs del sistema:</strong>
+                <ul>
+                  <li>Sección "Logs" con filtros: Nivel (info/warning/error), Rango de fechas.</li>
+                  <li>Mostrar últimos 100 logs con timestamp, nivel, mensaje.</li>
+                  <li>Exportar logs a archivo .txt.</li>
+                </ul>
+              </li>
+              <li><strong>Alertas:</strong>
+                <ul>
+                  <li>Notificación si uptime < 99%.</li>
+                  <li>Alerta si errores 5xx > 10 en 1 hora.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Dashboard de métricas funcional con datos reales.</li>
+              <li>Integración con herramienta de monitoreo (ej: Sentry, Datadog).</li>
+              <li>Alertas configuradas y funcionando.</li>
+              <li>Logs accesibles y exportables.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HU25: Gestión de seguridad -->
+        <div class="user-story-detail">
+          <h4>HU25: Gestión de seguridad</h4>
+          <p class="story-text"><em>Como administrador<br>
+          Quiero ejecutar controles de dependencias y permisos<br>
+          Para reducir riesgos de seguridad.</em></p>
+          
+          <div class="acceptance-criteria">
+            <h5>✓ Criterios de Aceptación:</h5>
+            <ul>
+              <li><strong>Panel de seguridad:</strong>
+                <ul>
+                  <li>Ruta <code>/admin/security</code> con secciones:</li>
+                  <li>Dependencias vulnerables (npm audit / Snyk).</li>
+                  <li>Certificados SSL (fecha de expiración).</li>
+                  <li>Configuración de CORS y headers de seguridad.</li>
+                  <li>Intentos de login fallidos (últimas 24h).</li>
+                </ul>
+              </li>
+              <li><strong>Escaneo de vulnerabilidades:</strong>
+                <ul>
+                  <li>Botón "Escanear dependencias" ejecuta <code>npm audit</code> o Snyk.</li>
+                  <li>Muestra lista de vulnerabilidades con: Paquete, Severidad (crítica/alta/media/baja), Versión afectada, Fix disponible.</li>
+                  <li>Links a CVE database para más info.</li>
+                </ul>
+              </li>
+              <li><strong>Gestión de permisos:</strong>
+                <ul>
+                  <li>Lista de tokens JWT activos con opción de revocar.</li>
+                  <li>Configurar tiempo de expiración de tokens.</li>
+                  <li>Forzar cierre de sesión de todos los usuarios (emergencia).</li>
+                </ul>
+              </li>
+              <li><strong>Backups:</strong>
+                <ul>
+                  <li>Sección "Backups" con lista de backups automáticos.</li>
+                  <li>Botón "Crear backup manual".</li>
+                  <li>Restaurar backup (con confirmación).</li>
+                </ul>
+              </li>
+              <li><strong>Logs de seguridad:</strong>
+                <ul>
+                  <li>Registro de eventos: Cambios de contraseña, cambios de rol, intentos de acceso no autorizados.</li>
+                  <li>Exportar logs de seguridad.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="definition-done">
+            <h5>✅ Definición de Hecho:</h5>
+            <ul>
+              <li>Panel de seguridad funcional.</li>
+              <li>Escaneo de vulnerabilidades integrado.</li>
+              <li>Sistema de backups automáticos configurado.</li>
+              <li>Logs de seguridad almacenados y accesibles.</li>
+              <li>Documentación de procedimientos de seguridad.</li>
+            </ul>
+          </div>
+        </div>
 
         <h1>Propuesta de Sprints (MVP → producto robusto)</h1>
         <p>

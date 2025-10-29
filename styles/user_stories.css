@@ -135,6 +135,102 @@
   margin-top: 8px;
 }
 
+/* User Story Detail Cards */
+.user-story-detail {
+  background: white;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: var(--shadow);
+}
+
+.user-story-detail h4 {
+  margin-top: 0;
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.story-text {
+  background: #f8f9fa;
+  border-left: 3px solid var(--accent2);
+  padding: 12px 16px;
+  margin: 12px 0;
+  font-style: italic;
+  color: #495057;
+  line-height: 1.6;
+}
+
+.acceptance-criteria,
+.definition-done {
+  margin-top: 16px;
+}
+
+.acceptance-criteria h5,
+.definition-done h5 {
+  color: #28a745;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.acceptance-criteria ul,
+.definition-done ul {
+  margin: 8px 0;
+  padding-left: 24px;
+}
+
+.acceptance-criteria li,
+.definition-done li {
+  margin: 8px 0;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.acceptance-criteria ul ul {
+  margin-top: 4px;
+  padding-left: 20px;
+}
+
+.acceptance-criteria ul ul li {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #495057;
+}
+
+.acceptance-criteria code,
+.definition-done code {
+  background: #e9ecef;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: #d63384;
+}
+
+.definition-done {
+  background: #d4edda;
+  border-left: 3px solid #28a745;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-top: 16px;
+}
+
+.definition-done h5 {
+  margin-top: 0;
+  color: #155724;
+}
+
+.definition-done ul {
+  margin-bottom: 0;
+}
+
+.definition-done li {
+  color: #155724;
+}
+
 .taiga-btn {
   display: inline-block;
   background: var(--accent);
@@ -150,4 +246,20 @@
 
 .taiga-btn:hover {
   background: #0056b3;
+}
+
+/* Responsive adjustments for user stories */
+@media (max-width: 768px) {
+  .user-story-detail {
+    padding: 16px;
+  }
+
+  .user-story-detail h4 {
+    font-size: 18px;
+  }
+
+  .acceptance-criteria code,
+  .definition-done code {
+    font-size: 12px;
+  }
 }
