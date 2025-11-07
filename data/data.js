@@ -362,6 +362,10 @@ const EMBEDDED_DATA = {
           "Skeleton loader durante carga ≤ 2 segundos.",
           "GET /api/dashboard responde con datos agregados.",
           "Si no hay transacciones, mostrar mensaje de bienvenida y CTA 'Agregar primera transacción'.",
+          "[Heurística 1: Visibilidad del estado] - Indicadores visuales claros del saldo actual y tendencias financieras.",
+          "[Heurística 4: Consistencia y estándares] - Usar convenciones de colores estándar (verde para ingresos, rojo para gastos).",
+          "[Heurística 6: Reconocimiento antes que recuerdo] - Mostrar información relevante visible sin necesidad de navegar.",
+          "[Heurística 8: Diseño estético y minimalista] - Priorizar información crítica, evitar saturación visual.",
         ],
         definitionOfDone: [
           "Dashboard funcional con datos reales del usuario.",
