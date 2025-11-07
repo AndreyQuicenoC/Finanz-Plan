@@ -403,6 +403,10 @@ const EMBEDDED_DATA = {
           "Transacción aparece inmediatamente en lista ordenada por fecha.",
           "Transacción se guarda en MongoDB con: userId, type, amount, category, date, description, account, tags, createdAt.",
           "Actualiza balance de cuenta asociada automáticamente.",
+          "[Heurística 3: Control y libertad] - Botón 'Cancelar' visible para abandonar el formulario sin perder datos (confirmación si hay cambios).",
+          "[Heurística 5: Prevención de errores] - Validación en tiempo real de campos numéricos y alertas sobre fechas futuras.",
+          "[Heurística 9: Ayuda ante errores] - Mensajes de error específicos bajo cada campo (ej: 'El monto debe ser mayor a 0').",
+          "[Heurística 7: Flexibilidad y eficiencia] - Atajos de teclado para guardar (Ctrl+Enter) y categorías sugeridas según historial.",
         ],
         definitionOfDone: [
           "Formulario funcional y validado.",
