@@ -292,6 +292,10 @@ const EMBEDDED_DATA = {
           "Credenciales incorrectas → 401 Unauthorized con mensaje 'Correo o contraseña inválidos'.",
           "Cuenta bloqueada → 423 Locked con mensaje 'Cuenta temporalmente bloqueada'.",
           "Se limita a 5 intentos fallidos por IP cada 10 min (respuesta 429).",
+          "[Heurística 1: Visibilidad del estado] - Indicador de carga durante autenticación y confirmación visual al iniciar/cerrar sesión.",
+          "[Heurística 2: Correspondencia con el mundo real] - Mensajes en lenguaje claro sin jerga técnica (ej: 'Credenciales incorrectas' en vez de 'Error 401').",
+          "[Heurística 5: Prevención de errores] - Límite de intentos fallidos para prevenir ataques de fuerza bruta.",
+          "[Heurística 7: Flexibilidad y eficiencia] - Opción de 'Recordar sesión' para usuarios frecuentes.",
         ],
         definitionOfDone: [
           "Todos los criterios de aceptación se cumplen.",
