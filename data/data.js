@@ -255,6 +255,10 @@ const EMBEDDED_DATA = {
           "Cualquier error 5xx muestra 'Intenta de nuevo más tarde' (log solo en modo dev).",
           "El usuario se guarda en MongoDB con contraseña hasheada usando bcrypt (mín. 10 salt rounds).",
           "Se registra la fecha de creación (createdAt) en formato ISO-8601.",
+          "[Heurística 1: Visibilidad del estado] - Mostrar indicador de carga durante el proceso de registro y feedback visual al completar cada campo.",
+          "[Heurística 3: Control y libertad] - Permitir al usuario cancelar el registro y volver a la página anterior.",
+          "[Heurística 5: Prevención de errores] - Validación en tiempo real de campos con indicadores visuales (✓ correcto, ✗ error).",
+          "[Heurística 9: Ayuda ante errores] - Mensajes de error específicos y constructivos (ej: 'La contraseña debe contener al menos una mayúscula').",
         ],
         definitionOfDone: [
           "Todos los criterios de aceptación se cumplen.",
