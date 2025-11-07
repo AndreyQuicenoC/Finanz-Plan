@@ -501,6 +501,9 @@ const EMBEDDED_DATA = {
           "En dashboard aparece sección 'Pagos próximos' (próximos 7 días).",
           "Click en pago → modal con opciones 'Marcar pagado' o 'Editar'.",
           "Al marcar pagado, crea transacción automáticamente.",
+          "[Heurística 1: Visibilidad del estado] - Código de colores claro para estados de pagos (pendiente/pagado/vencido).",
+          "[Heurística 6: Reconocimiento antes que recuerdo] - Vista de calendario con todos los pagos visibles sin necesidad de buscar.",
+          "[Heurística 7: Flexibilidad y eficiencia] - Notificaciones automáticas proactivas para recordar pagos importantes.",
         ],
         definitionOfDone: [
           "Calendario funcional con pagos programados.",
