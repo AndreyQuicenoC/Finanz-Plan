@@ -641,6 +641,10 @@ const EMBEDDED_DATA = {
           "Token se borra, redirect a /inicio, toast 'Cuenta eliminada'.",
           "Contraseña incorrecta → 401 Unauthorized.",
           "Cuenta no existe → 404 Not Found.",
+          "[Heurística 3: Control y libertad] - Opción clara de 'Cancelar' al editar perfil sin perder cambios accidentalmente.",
+          "[Heurística 5: Prevención de errores] - Confirmación de doble paso (contraseña + escribir ELIMINAR) antes de eliminar cuenta.",
+          "[Heurística 6: Reconocimiento antes que recuerdo] - Campos precargados con información actual del usuario.",
+          "[Heurística 9: Ayuda ante errores] - Validación en tiempo real con mensajes claros sobre requisitos de cada campo.",
         ],
         definitionOfDone: [
           "Todos los criterios de aceptación se cumplen.",
