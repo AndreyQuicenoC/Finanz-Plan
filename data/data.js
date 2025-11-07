@@ -328,6 +328,10 @@ const EMBEDDED_DATA = {
           "El token se invalida inmediatamente.",
           "Toast 'Contraseña actualizada' y redirige a /login en ≤ 500 ms.",
           "Correo no registrado → 202 Accepted (respuesta genérica).",
+          "[Heurística 1: Visibilidad del estado] - Mostrar progreso del proceso (email enviado → enlace válido → contraseña actualizada).",
+          "[Heurística 3: Control y libertad] - Permitir cancelar el proceso y volver al login en cualquier momento.",
+          "[Heurística 9: Ayuda ante errores] - Mensajes claros sobre token expirado con opción de reenvío inmediato.",
+          "[Heurística 10: Ayuda y documentación] - Instrucciones claras en cada paso del proceso de recuperación.",
         ],
         definitionOfDone: [
           "Todos los criterios de aceptación se cumplen.",
