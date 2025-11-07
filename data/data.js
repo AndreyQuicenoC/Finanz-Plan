@@ -675,6 +675,9 @@ const EMBEDDED_DATA = {
           "Tooltips informativos en formularios complejos.",
           "Al final de cada artículo: '¿Fue útil? 👍 👎'",
           "Si no fue útil, opción de contactar soporte directamente.",
+          "[Heurística 7: Flexibilidad y eficiencia] - Atajo de teclado (Ctrl+H) para acceso rápido a ayuda contextual.",
+          "[Heurística 10: Ayuda y documentación] - Centro de ayuda completo con búsqueda instantánea y contenido visual.",
+          "[Heurística 6: Reconocimiento antes que recuerdo] - Ayuda contextual (ícono '?') en secciones complejas donde se necesita.",
         ],
         definitionOfDone: [
           "Centro de ayuda accesible y funcional.",
