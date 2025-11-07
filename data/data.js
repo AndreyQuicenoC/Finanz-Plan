@@ -535,6 +535,10 @@ const EMBEDDED_DATA = {
           "Click en categoría filtra transacciones de esa categoría.",
           "Botón 'Exportar PDF' genera reporte descargable.",
           "Botón 'Exportar Excel' descarga datos en .xlsx.",
+          "[Heurística 4: Consistencia y estándares] - Uso de convenciones de visualización de datos estándar (colores, tipos de gráficos).",
+          "[Heurística 6: Reconocimiento antes que recuerdo] - Información visual inmediata sin necesidad de memorizar datos.",
+          "[Heurística 7: Flexibilidad y eficiencia] - Múltiples opciones de exportación (PDF/Excel) para diferentes necesidades.",
+          "[Heurística 8: Diseño estético y minimalista] - Gráficos limpios que resaltan información clave sin elementos innecesarios.",
         ],
         definitionOfDone: [
           "Todos los gráficos renderizados correctamente.",
