@@ -35,7 +35,7 @@ const EMBEDDED_DATA = {
       {
         code: "HU02",
         title: "Cómo funciona / Tour",
-        sprint: "S1",
+        sprint: "S5",
         epic: "E-1 Experiencia de Primer Contacto",
         ux: 3,
         design: 5,
@@ -86,35 +86,6 @@ const EMBEDDED_DATA = {
         ],
       },
       {
-        code: "HU04",
-        title: "Planes/Precios",
-        sprint: "S1",
-        epic: "E-1 Experiencia de Primer Contacto",
-        ux: 2,
-        design: 5,
-        front: 5,
-        back: 2,
-        description:
-          "Como visitante\nQuiero comparar planes gratuitos y de pago\nPara decidir si me registro.",
-        acceptanceCriteria: [
-          "Página /precios con tabla comparativa o cards.",
-          "Mínimo 3 planes: Gratis, Básico, Premium.",
-          "Cada plan muestra: precio, features incluidas, limitaciones.",
-          "Features destacadas con checkmarks ✓ o X.",
-          "Plan recomendado visualmente destacado.",
-          "Botones 'Comenzar' o 'Elegir plan' en cada card.",
-          "Link a registro con plan preseleccionado.",
-          "En móvil: cards apiladas verticalmente.",
-          "En desktop: layout horizontal.",
-        ],
-        definitionOfDone: [
-          "Tabla de precios completa y actualizada.",
-          "Links a registro funcionales.",
-          "Pruebas A/B documentadas (opcional).",
-          "Precios claramente visibles sin ambigüedad.",
-        ],
-      },
-      {
         code: "HU05",
         title: "Blog / Artículos",
         sprint: "S4",
@@ -147,7 +118,7 @@ const EMBEDDED_DATA = {
       {
         code: "HU06",
         title: "Sobre nosotros",
-        sprint: "S4",
+        sprint: "S1",
         epic: "E-1 Experiencia de Primer Contacto",
         ux: 2,
         design: 5,
@@ -233,7 +204,7 @@ const EMBEDDED_DATA = {
       {
         code: "HU09",
         title: "Política de privacidad y Términos de servicio",
-        sprint: "S4",
+        sprint: "S2",
         epic: "E-1 Experiencia de Primer Contacto",
         ux: 1,
         design: 2,
