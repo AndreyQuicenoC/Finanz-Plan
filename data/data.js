@@ -711,6 +711,9 @@ const EMBEDDED_DATA = {
           "Botón 'Eliminar' con confirmación doble.",
           "Sección 'Actividad reciente' muestra últimos 20 logins y cambios.",
           "Exportar logs a CSV.",
+          "[Heurística 5: Prevención de errores] - Confirmación doble antes de acciones críticas (bloquear, eliminar usuarios).",
+          "[Heurística 6: Reconocimiento antes que recuerdo] - Información completa visible en tabla sin necesidad de navegar.",
+          "[Heurística 7: Flexibilidad y eficiencia] - Filtros y búsqueda rápida para gestionar grandes volúmenes de usuarios.",
         ],
         definitionOfDone: [
           "Panel admin completamente funcional.",
