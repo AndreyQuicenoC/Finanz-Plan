@@ -165,7 +165,6 @@ function showEmptyState() {
  */
 function renderStories() {
   console.log(`Renderizando ${state.filteredStories.length} historias`);
-  elements.loading.hidden = true;
   elements.errorState.hidden = true;
 
   if (state.filteredStories.length === 0) {
