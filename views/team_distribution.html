@@ -1,28 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Distribución del equipo del Gestor de Finanzas Personales"
+    />
     <title>Distribución del Equipo - Finanz</title>
-    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/user_stories.css" />
     <link rel="stylesheet" href="../styles/team_distribution.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="wrap">
-      <div class="header">
-        <div class="logo">👥</div>
-        <div class="title">
-          <h1>Distribución del Equipo — Finanz</h1>
-          <p>Roles, responsabilidades y organización por sprints</p>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <h1 class="logo">
+            <span class="logo-icon"></span>
+            Distribución del Equipo
+          </h1>
+          <div class="project-info">
+            <span class="project-name">Finanz</span>
+          </div>
+          <div style="display: flex; gap: 0.5rem; align-items: center;">
+            <a href="../index.html" class="back-button" aria-label="Volver al inicio">
+              <span>←</span> Inicio
+            </a>
+            <button
+              id="theme-toggle"
+              class="theme-toggle"
+              aria-label="Cambiar tema"
+            >
+              <span class="theme-icon">Oscuro</span>
+            </button>
+          </div>
         </div>
       </div>
-      <a href="../index.html" class="back-btn">
-        <span>←</span> Volver al inicio
-      </a>
-      <div class="content">
-        <h1>Organización del Equipo</h1>
+    </header>
 
-        <!-- Product Owner Section -->
+    <main class="main">
+      <div class="container">
+        <!-- Información del equipo -->
+        <section class="info-section">
+          <p class="info-description" id="team-description">
+            Roles, responsabilidades y organización ágil del proyecto Finanz
+          </p>
+        </section>
+
+        <!-- Roles del equipo -->
+        <section class="roles-section">
+          <h2 class="section-title">Roles del Equipo</h2>
+          <div id="roles-container" class="roles-grid">
+            <!-- Se cargará dinámicamente desde team_data.js -->
+          </div>
+
+          <div id="loading" class="loading" role="status" aria-live="polite">
+            <div class="spinner"></div>
+            <p>Cargando información del equipo...</p>
+          </div>
+
+          <div id="error-state" class="error-state" hidden role="alert">
+            <h2>Error al cargar información</h2>
+            <p id="error-message"></p>
+          </div>
+        </section>
+
+        <!-- Metodología -->
+        <section class="methodology-section">
+          <h2 class="section-title">Metodología de Trabajo</h2>
+          <div id="methodology-container" class="methodology-card">
+            <!-- Se cargará dinámicamente -->
+          </div>
+
+          <h3 class="subsection-title">Sprints del Proyecto</h3>
+          <div id="sprints-container" class="sprints-grid">
+            <!-- Se cargará dinámicamente -->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Finanz - Gestor de Finanzas Personales</p>
+        <p>Equipo organizado con metodología ágil Scrum</p>
+      </div>
+    </footer>
+
+    <script src="../data/team_data.js"></script>
+    <script src="../scripts/team_distribution.js"></script>
+  </body>
+</html>
         <div class="role-section product-owner">
           <h2>🎯 Product Owner</h2>
           <div class="member">

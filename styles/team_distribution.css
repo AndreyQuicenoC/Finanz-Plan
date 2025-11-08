@@ -1,396 +1,442 @@
-/* Team Distribution Styles */
+/* ===================================
+   Team Distribution - Modern Styles
+   Extends: user_stories.css (base)
+   =================================== */
 
-.content {
-  width: 100%;
-  max-width: 1200px;
+/* ===================================
+   Info Section
+   =================================== */
+.info-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
 }
 
-.content h1 {
-  font-size: 28px;
+.info-description {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ===================================
+   Section Titles
+   =================================== */
+.section-title {
+  font-size: 1.875rem;
   font-weight: 600;
-  margin: 32px 0 24px;
-  color: var(--text);
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
   border-bottom: 2px solid var(--border);
-  padding-bottom: 12px;
 }
 
-.content h2 {
-  font-size: 22px;
+.subsection-title {
+  font-size: 1.5rem;
   font-weight: 600;
-  margin: 20px 0 12px;
-  color: var(--text);
+  color: var(--text-primary);
+  margin: 2.5rem 0 1.5rem;
 }
 
-.content h3 {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 16px 0 8px;
-  color: var(--accent);
+/* ===================================
+   Roles Grid
+   =================================== */
+.roles-section {
+  margin-bottom: 4rem;
 }
 
-.content h4 {
-  font-size: 15px;
-  font-weight: 600;
-  margin: 12px 0 8px;
-  color: var(--muted);
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
 }
 
-/* Role Sections */
-.role-section {
-  background: var(--card);
-  border: 2px solid var(--border);
-  border-radius: 8px;
-  padding: 24px;
-  margin-bottom: 24px;
-  box-shadow: var(--shadow);
+.role-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--accent);
 }
 
-.product-owner {
-  border-left: 4px solid #ff6b6b;
+.role-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
-.scrum-master {
-  border-left: 4px solid #4ecdc4;
-}
-
-.frontend-team {
-  border-left: 4px solid #95e1d3;
-}
-
-.backend-team {
-  border-left: 4px solid #f38181;
-}
-
-.devops-security {
-  border-left: 4px solid #aa96da;
-}
-
-.role-section h2 {
-  margin-top: 0;
+.role-header {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
 }
 
-/* Member Cards */
-.member {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 16px;
-  margin-bottom: 16px;
-}
-
-.member:last-child {
-  margin-bottom: 0;
-}
-
-.member h3 {
-  margin-top: 0;
-  color: var(--text);
-  font-size: 18px;
-}
-
-.team-members {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
-/* Responsibilities */
-.responsibilities {
-  margin-top: 16px;
-}
-
-.responsibilities h4 {
-  margin-top: 0;
-  color: var(--muted);
-}
-
-.responsibilities ul {
-  margin: 8px 0;
-  padding-left: 24px;
-}
-
-.responsibilities li {
-  margin: 8px 0;
-  line-height: 1.6;
-  color: var(--text);
-}
-
-.responsibilities li strong {
-  color: var(--accent);
-}
-
-.responsibilities ul ul {
-  margin-top: 4px;
-  padding-left: 20px;
-}
-
-.responsibilities ul ul li {
-  margin: 4px 0;
-  font-size: 14px;
-  color: #495057;
-}
-
-/* Sprint Overview Section */
-.sprint-overview {
-  margin-top: 48px;
-  background: #f8f9fa;
-  padding: 32px;
-  border-radius: 8px;
-}
-
-.intro-text {
-  background: #e7f3ff;
-  border-left: 4px solid var(--accent);
-  padding: 16px;
-  margin: 16px 0 32px;
-  border-radius: 4px;
-  color: #495057;
-  line-height: 1.6;
-}
-
-/* Sprint Timeline */
-.sprint-timeline {
-  margin-top: 24px;
-}
-
-.timeline-item {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 24px;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  border-left: 4px solid var(--accent);
-  box-shadow: var(--shadow);
-  transition: transform 0.2s;
-}
-
-.timeline-item:hover {
-  transform: translateX(5px);
-}
-
-.timeline-badge {
+.role-icon {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1rem;
   color: white;
   flex-shrink: 0;
 }
 
-.timeline-badge.sprint-1 {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.timeline-badge.sprint-2 {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-}
-
-.timeline-badge.sprint-3 {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-}
-
-.timeline-badge.sprint-4 {
-  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-}
-
-.timeline-badge.sprint-5 {
-  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-}
-
-.timeline-content {
-  flex: 1;
-}
-
-.timeline-content h3 {
-  margin: 0 0 8px;
-  color: var(--text);
-  font-size: 20px;
-}
-
-.timeline-desc {
-  margin: 4px 0;
-  color: #6c757d;
-  font-size: 15px;
-}
-
-.timeline-hu {
-  margin: 8px 0 0;
-  font-size: 13px;
-  color: var(--accent);
+.role-name {
+  font-size: 1.25rem;
   font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
 }
 
-/* Sprint Distribution Section */
-.sprint-distribution {
-  margin-top: 48px;
+.role-members {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
 }
 
-/* Sprint Cards */
-.sprint-card {
-  background: white;
-  border: 2px solid var(--border);
-  border-radius: 8px;
-  padding: 24px;
-  margin-bottom: 32px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.sprint-card h2 {
-  margin-top: 0;
-  color: var(--accent);
-  font-size: 24px;
-  border-bottom: 2px solid var(--border);
-  padding-bottom: 12px;
-}
-
-.sprint-desc {
-  color: var(--muted);
-  font-style: italic;
-  margin: 8px 0 12px;
-  font-size: 14px;
-}
-
-.sprint-goal {
-  background: #d4edda;
-  border-left: 4px solid #28a745;
-  padding: 12px 16px;
-  margin: 12px 0 24px;
-  border-radius: 4px;
-  color: #155724;
-  font-size: 15px;
-}
-
-/* Sprint Roles */
-.sprint-role {
-  background: var(--card);
-  border-left: 3px solid var(--accent2);
-  border-radius: 4px;
-  padding: 16px;
-  margin-bottom: 16px;
-}
-
-.sprint-role h3 {
-  margin-top: 0;
-  color: var(--text);
-  font-size: 17px;
+.role-responsibilities h4 {
+  font-size: 0.875rem;
   font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.sprint-role ul {
-  margin: 8px 0 0;
-  padding-left: 24px;
+.role-responsibilities ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.sprint-role li {
-  margin: 6px 0;
+.role-responsibilities li {
+  padding: 0.5rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+  color: var(--text-secondary);
   line-height: 1.5;
-  color: #495057;
+  font-size: 0.9rem;
 }
 
-/* Communication Section */
-.communication-section {
-  margin-top: 48px;
-  background: #f8f9fa;
-  border-radius: 8px;
-  padding: 32px;
-}
-
-.flow-card {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 20px;
-  margin-bottom: 24px;
-  box-shadow: var(--shadow);
-}
-
-.flow-card h3 {
-  margin-top: 0;
+.role-responsibilities li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
   color: var(--accent);
-  font-size: 20px;
-  border-bottom: 2px solid var(--border);
-  padding-bottom: 8px;
+  font-weight: bold;
 }
 
-.flow-card ol,
-.flow-card ul {
-  margin: 16px 0;
-  padding-left: 28px;
+/* ===================================
+   Methodology Section
+   =================================== */
+.methodology-section {
+  margin-bottom: 4rem;
 }
 
-.flow-card li {
-  margin: 12px 0;
+.methodology-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+}
+
+.methodology-content h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.ceremonies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.ceremony-item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.ceremony-item:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.ceremony-item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 0.75rem;
+}
+
+.ceremony-item p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.ceremony-item p strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.communication-flow,
+.feedback-flow {
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.communication-flow ol,
+.feedback-flow ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.communication-flow li,
+.feedback-flow li {
+  padding: 0.5rem 0;
+  color: var(--text-secondary);
   line-height: 1.6;
-  color: var(--text);
 }
 
-.flow-card li strong {
+.communication-flow li strong,
+.feedback-flow li strong {
   color: var(--accent);
   font-weight: 600;
 }
 
-.flow-card p {
-  margin: 12px 0;
-  color: #495057;
+/* ===================================
+   Sprints Grid
+   =================================== */
+.sprints-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.sprint-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.sprint-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.sprint-header {
+  padding: 1.5rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sprint-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.sprint-duration {
+  font-size: 0.875rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.sprint-focus {
+  padding: 1.5rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.sprint-focus h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sprint-focus p {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1rem;
   line-height: 1.6;
 }
 
-/* Responsive Design */
+.sprint-roles {
+  padding: 1.5rem;
+}
+
+.sprint-role-section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.sprint-role-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.sprint-role-section h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 0.75rem;
+}
+
+.sprint-role-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sprint-role-section li {
+  padding: 0.35rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+.sprint-role-section li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* ===================================
+   Loading & Error States
+   =================================== */
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-muted);
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-state {
+  text-align: center;
+  padding: 3rem;
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.error-state h2 {
+  color: #c33;
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+.error-state p {
+  color: #a22;
+  margin: 0;
+}
+
+/* ===================================
+   Footer
+   =================================== */
+.footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
 @media (max-width: 768px) {
-  .team-members {
+  .roles-grid {
     grid-template-columns: 1fr;
   }
 
-  .sprint-card {
-    padding: 16px;
+  .ceremonies-grid {
+    grid-template-columns: 1fr;
   }
 
-  .role-section {
-    padding: 16px;
-  }
-
-  .communication-section {
-    padding: 20px;
-  }
-
-  .sprint-overview {
-    padding: 20px;
-  }
-
-  .timeline-item {
+  .sprint-header {
     flex-direction: column;
-    gap: 12px;
-    padding: 16px;
+    gap: 1rem;
+    align-items: flex-start;
   }
 
-  .timeline-badge {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+  .section-title {
+    font-size: 1.5rem;
   }
 
-  .timeline-content h3 {
-    font-size: 18px;
+  .subsection-title {
+    font-size: 1.25rem;
   }
 
-  .content h1 {
-    font-size: 24px;
+  .role-name {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .role-card {
+    padding: 1rem;
   }
 
-  .content h2 {
-    font-size: 20px;
+  .methodology-card {
+    padding: 1.25rem;
   }
 
-  .content h3 {
-    font-size: 16px;
+  .sprint-roles {
+    padding: 1rem;
+  }
+
+  .info-description {
+    font-size: 1rem;
   }
 }
