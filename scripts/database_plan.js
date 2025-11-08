@@ -11,7 +11,6 @@ const state = {
 // ==================== Elementos del DOM ====================
 const elements = {
   themeToggle: document.getElementById("theme-toggle"),
-  erdSvg: document.getElementById("erd-svg"),
   tablesList: document.getElementById("tables-list"),
   loading: document.getElementById("loading"),
   errorState: document.getElementById("error-state"),
@@ -98,9 +97,6 @@ function loadDatabase() {
       elements.dbNote.textContent = DATABASE_DATA.note;
     }
 
-    // Renderizar diagrama SVG
-    renderERD();
-
     // Renderizar lista de tablas
     renderTablesList();
 
@@ -138,106 +134,6 @@ function showError(message) {
 }
 
 // ==================== Renderizado ====================
-/**
- * Renderiza el diagrama ERD en SVG
- */
-function renderERD() {
-  if (!DATABASE_DATA.tables || !DATABASE_DATA.relationships) return;
-
-  // Limpiar SVG
-  elements.erdSvg.innerHTML = "";
-
-  // Crear marker para flechas
-  const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
-  const marker = document.createElementNS(
-    "http://www.w3.org/2000/svg",
-    "marker"
-  );
-  marker.setAttribute("id", "arrow");
-  marker.setAttribute("markerWidth", "10");
-  marker.setAttribute("markerHeight", "10");
-  marker.setAttribute("refX", "6");
-  marker.setAttribute("refY", "5");
-  marker.setAttribute("orient", "auto");
-
-  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-  path.setAttribute("d", "M0,0 L10,5 L0,10 z");
-  path.setAttribute("fill", "#9aa");
-
-  marker.appendChild(path);
-  defs.appendChild(marker);
-  elements.erdSvg.appendChild(defs);
-
-  // Renderizar relaciones (líneas)
-  DATABASE_DATA.relationships.forEach((rel) => {
-    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-    line.setAttribute("x1", rel.fromPoint[0]);
-    line.setAttribute("y1", rel.fromPoint[1]);
-    line.setAttribute("x2", rel.toPoint[0]);
-    line.setAttribute("y2", rel.toPoint[1]);
-    line.setAttribute("stroke", "#9aa");
-    line.setAttribute("stroke-width", "2");
-    line.setAttribute("marker-end", "url(#arrow)");
-    elements.erdSvg.appendChild(line);
-  });
-
-  // Renderizar tablas
-  DATABASE_DATA.tables.forEach((table) => {
-    const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
-    g.setAttribute("transform", `translate(${table.x},${table.y})`);
-
-    // Rectángulo de fondo
-    const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-    rect.setAttribute("width", table.width);
-    rect.setAttribute("height", table.height);
-    rect.setAttribute("rx", "10");
-    rect.setAttribute("ry", "10");
-    rect.setAttribute("fill", table.color);
-    rect.setAttribute("stroke", table.stroke);
-    rect.setAttribute("stroke-width", "2");
-    g.appendChild(rect);
-
-    // Título de la tabla
-    const title = document.createElementNS(
-      "http://www.w3.org/2000/svg",
-      "text"
-    );
-    title.setAttribute("x", "12");
-    title.setAttribute("y", "24");
-    title.setAttribute("class", "table-title");
-    title.textContent = table.name;
-    g.appendChild(title);
-
-    // Campos
-    table.fields.forEach((field, index) => {
-      const text = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "text"
-      );
-      text.setAttribute("x", "12");
-      text.setAttribute("y", 50 + index * 18);
-
-      if (field.isPK) {
-        text.setAttribute("class", "field-pk");
-      } else if (field.isFK) {
-        text.setAttribute("class", "field-fk");
-      } else {
-        text.setAttribute("class", "field");
-      }
-
-      let content = `${field.name}`;
-      if (field.isPK) content += " (PK)";
-      if (field.isFK) content += ` (FK → ${field.ref})`;
-      if (field.note) content += ` ${field.note}`;
-
-      text.textContent = content;
-      g.appendChild(text);
-    });
-
-    elements.erdSvg.appendChild(g);
-  });
-}
-
 /**
  * Renderiza la lista de tablas
  */
