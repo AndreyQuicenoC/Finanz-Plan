@@ -1,45 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Finanz.</title>
-    <link rel="stylesheet" href="styles/base.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Finanz - Gestor de Finanzas Personales. Documentación completa del proyecto."
+    />
+    <title>Finanz - Gestor de Finanzas Personales</title>
+    <link rel="stylesheet" href="styles/user_stories.css" />
     <link rel="stylesheet" href="styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="wrap">
-      <div class="header">
-        <img src="finanz-logo.svg" alt="Finanz Logo" class="logo-index" />
-        <h1>Finanz</h1>
-        <p class="subtitle">
-          Gestor de finanzas, navega por las diferentes secciones del proyecto
-        </p>
-      </div>
-      <div class="nav">
-        <a href="views/databse_plan.html" class="nav-btn">
-          <div class="icon">📊</div>
-          <div class="title">Planificación de Base de Datos</div>
-          <div class="desc">Diagrama ERD y estructura de la base de datos</div>
-        </a>
-        <a href="views/site_map.html" class="nav-btn">
-          <div class="icon">🗺️</div>
-          <div class="title">Mapa del Sitio</div>
-          <div class="desc">Estructura del sitio web y navegación</div>
-        </a>
-        <a href="views/user_stories.html" class="nav-btn">
-          <div class="icon">📝</div>
-          <div class="title">Historias de Usuario</div>
-          <div class="desc">Casos de uso y requerimientos del usuario</div>
-        </a>
-        <a href="views/team_distribution.html" class="nav-btn">
-          <div class="icon">👥</div>
-          <div class="title">Distribución del Equipo</div>
-          <div class="desc">
-            Roles, responsabilidades y organización por sprints
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo-section">
+            <img src="finanz-logo.svg" alt="Finanz Logo" class="logo-img" />
+            <div class="logo-text">
+              <h1 class="logo-title">Finanz</h1>
+              <p class="logo-subtitle">Gestor de Finanzas Personales</p>
+            </div>
           </div>
-        </a>
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Cambiar tema"
+          >
+            <span class="theme-icon">Oscuro</span>
+          </button>
+        </div>
       </div>
-    </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <section class="welcome-section">
+          <h2 class="welcome-title">Documentación del Proyecto</h2>
+          <p class="welcome-description">
+            Explora las diferentes secciones de la documentación para conocer la estructura, 
+            funcionalidades y planificación del proyecto Finanz.
+          </p>
+        </section>
+
+        <section class="navigation-grid">
+          <a href="views/databse_plan.html" class="nav-card">
+            <div class="nav-card-header">
+              <div class="nav-card-icon nav-icon-database"></div>
+              <h3 class="nav-card-title">Planificación de Base de Datos</h3>
+            </div>
+            <p class="nav-card-description">
+              Diagrama ERD completo y estructura detallada de la base de datos PostgreSQL
+            </p>
+            <span class="nav-card-arrow">→</span>
+          </a>
+
+          <a href="views/site_map.html" class="nav-card">
+            <div class="nav-card-header">
+              <div class="nav-card-icon nav-icon-sitemap"></div>
+              <h3 class="nav-card-title">Mapa del Sitio</h3>
+            </div>
+            <p class="nav-card-description">
+              Estructura completa del sitio web incluyendo zonas públicas, privadas y administrativas
+            </p>
+            <span class="nav-card-arrow">→</span>
+          </a>
+
+          <a href="views/user_stories.html" class="nav-card">
+            <div class="nav-card-header">
+              <div class="nav-card-icon nav-icon-stories"></div>
+              <h3 class="nav-card-title">Historias de Usuario</h3>
+            </div>
+            <p class="nav-card-description">
+              Casos de uso detallados, requerimientos funcionales organizados por épicas y sprints
+            </p>
+            <span class="nav-card-arrow">→</span>
+          </a>
+
+          <a href="views/team_distribution.html" class="nav-card">
+            <div class="nav-card-header">
+              <div class="nav-card-icon nav-icon-team"></div>
+              <h3 class="nav-card-title">Distribución del Equipo</h3>
+            </div>
+            <p class="nav-card-description">
+              Roles del equipo, responsabilidades y organización ágil por sprints
+            </p>
+            <span class="nav-card-arrow">→</span>
+          </a>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Finanz - Gestor de Finanzas Personales</p>
+        <p>Proyecto desarrollado con metodología ágil Scrum</p>
+      </div>
+    </footer>
+
+    <script src="scripts/index.js"></script>
   </body>
 </html>
