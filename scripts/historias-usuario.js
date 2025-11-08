@@ -26,7 +26,6 @@ const elements = {
   epicFilter: document.getElementById("epic-filter"),
   sprintFilter: document.getElementById("sprint-filter"),
   storiesContainer: document.getElementById("stories-container"),
-  loading: document.getElementById("loading"),
   emptyState: document.getElementById("empty-state"),
   errorState: document.getElementById("error-state"),
   errorMessage: document.getElementById("error-message"),
@@ -113,7 +112,6 @@ function updateThemeIcon() {
  */
 function loadStories() {
   console.log("Cargando historias del proyecto:", state.currentProject);
-  showLoading();
 
   try {
     // Usar datos embebidos en lugar de fetch
@@ -137,7 +135,6 @@ function loadStories() {
 
     populateEpicFilter();
     applyFilters();
-    hideLoading();
   } catch (error) {
     showError(error.message);
     console.error("Error cargando historias:", error);
@@ -145,28 +142,10 @@ function loadStories() {
 }
 
 /**
- * Muestra el estado de carga
- */
-function showLoading() {
-  elements.loading.hidden = false;
-  elements.emptyState.hidden = true;
-  elements.errorState.hidden = true;
-  elements.storiesContainer.innerHTML = "";
-}
-
-/**
- * Oculta el estado de carga
- */
-function hideLoading() {
-  elements.loading.hidden = true;
-}
-
-/**
  * Muestra un mensaje de error
  * @param {string} message - Mensaje de error
  */
 function showError(message) {
-  elements.loading.hidden = true;
   elements.emptyState.hidden = true;
   elements.errorState.hidden = false;
   elements.errorMessage.textContent = message;
@@ -176,7 +155,6 @@ function showError(message) {
  * Muestra el estado vacío
  */
 function showEmptyState() {
-  elements.loading.hidden = true;
   elements.errorState.hidden = true;
   elements.emptyState.hidden = false;
 }
