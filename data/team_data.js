@@ -1,186 +1,324 @@
-// Datos de distribución del equipo - Finanz
+// ===================================
+// Team Data - Finanz Project
+// ===================================
+
 const TEAM_DATA = {
-  title: "Distribución del Equipo",
-  subtitle: "Roles, responsabilidades y organización ágil del proyecto Finanz",
+  descripcion: "Equipo de 7 integrantes organizados con metodología Scrum para desarrollo ágil del proyecto Finanz",
+  
   roles: [
     {
       id: "product-owner",
-      name: "Product Owner",
-      icon: "PO",
-      color: "#6366f1",
-      members: [
-        {
-          name: "Andrey Quiceno",
-          responsibilities: [
-            "Definir y priorizar requerimientos del producto",
-            "Crear y mantener historias de usuario en cada sprint",
-            "Realizar revisiones constantes del desarrollo",
-            "Generar informes detallados de cada sprint",
-            "Coordinar y dirigir reuniones de planificación y revisión",
-            "Validar que el desarrollo cumpla con los requisitos del negocio",
-            "Apoyo opcional en otras áreas según necesidad del proyecto",
-          ],
-        },
-      ],
+      nombre: "Product Owner",
+      icono: "PO",
+      color: "#3b82f6",
+      miembros: ["Andrey Quiceno"],
+      responsabilidades: [
+        "Definir y priorizar el Product Backlog",
+        "Crear historias de usuario con criterios de aceptación",
+        "Validar que el desarrollo cumpla los requerimientos",
+        "Maximizar el valor del producto",
+        "Ser la voz del usuario y stakeholders"
+      ]
     },
     {
       id: "scrum-master",
-      name: "Scrum Master",
-      icon: "SM",
+      nombre: "Scrum Master",
+      icono: "SM",
       color: "#8b5cf6",
-      members: [
-        {
-          name: "Ivan Ausecha",
-          responsibilities: [
-            "Revisión constante de información subida a Git/GitHub",
-            "Gestión de pull requests y merge de ramas",
-            "Retroalimentación de errores y mejoras al equipo",
-            "Comunicación entre programadores y product owner",
-            "Integración y conexión entre front-end y back-end",
-            "Validación de funciones y funcionalidades del código",
-            "Administración del repositorio",
-            "Testing y aseguramiento de calidad",
-            "Implementación de CI/CD (Integración y Despliegue Continuo)",
-            "Informar al Product Owner y DevOps sobre ajustes necesarios",
-          ],
-        },
-      ],
+      miembros: ["Ivan Ausecha"],
+      responsabilidades: [
+        "Facilitar ceremonias Scrum (Planning, Daily, Review, Retrospective)",
+        "Gestionar pull requests y merges en GitHub",
+        "Integrar frontend con backend",
+        "Realizar testing y aseguramiento de calidad",
+        "Implementar CI/CD y pipeline de despliegue"
+      ]
     },
     {
       id: "frontend",
-      name: "Equipo de Front-End",
-      icon: "FE",
+      nombre: "Desarrollo Frontend",
+      icono: "FE",
       color: "#10b981",
-      members: [
-        {
-          name: "Daniel Trujillo",
-        },
-        {
-          name: "Jonathan Aristizabal",
-        },
-      ],
-      teamResponsibilities: [
-        "Desarrollo de interfaces de usuario (UI)",
-        "Implementación de diseño responsive",
-        "Integración con APIs del back-end",
-        "Validaciones del lado del cliente",
-        "Optimización de rendimiento del front-end",
-        "Implementación de medidas de seguridad en rutas del front",
-        "Pruebas de interfaz y experiencia de usuario",
-        "Coordinación con Scrum Master para integración",
-      ],
+      miembros: ["Daniel Trujillo", "Jonathan Aristizabal"],
+      responsabilidades: [
+        "Desarrollar interfaces de usuario responsive",
+        "Implementar componentes y vistas del sistema",
+        "Integrar con APIs del backend",
+        "Optimizar rendimiento frontend",
+        "Testing de componentes"
+      ]
     },
     {
       id: "backend",
-      name: "Equipo de Back-End",
-      icon: "BE",
+      nombre: "Desarrollo Backend",
+      icono: "BE",
       color: "#f59e0b",
-      members: [
-        {
-          name: "UV Casaviejas",
-        },
-        {
-          name: "Luciana Urrego",
-        },
-      ],
-      teamResponsibilities: [
-        "Desarrollo de APIs y endpoints",
-        "Implementación de lógica de negocio",
-        "Gestión y diseño de base de datos",
-        "Autenticación y autorización (JWT, OAuth)",
-        "Implementación de medidas de seguridad en el servidor",
-        "Optimización de consultas y rendimiento",
-        "Documentación de APIs",
-        "Integración con servicios externos",
-        "Coordinación con Scrum Master para integración",
-      ],
+      miembros: ["UV Casaviejas", "Luciana Urrego"],
+      responsabilidades: [
+        "Desarrollar APIs RESTful seguras",
+        "Implementar lógica de negocio y validaciones",
+        "Gestionar operaciones con base de datos",
+        "Documentar APIs con Swagger/OpenAPI",
+        "Testing de servicios backend"
+      ]
     },
     {
       id: "devops",
-      name: "DevOps",
-      icon: "DO",
+      nombre: "DevOps & Base de Datos",
+      icono: "DO",
       color: "#ef4444",
-      members: [
-        {
-          name: "Luis Felipe Jimenez",
-          responsibilities: [
-            "Configuración y gestión de infraestructura",
-            "Implementación de pipelines CI/CD",
-            "Monitoreo y logging de aplicaciones",
-            "Gestión de contenedores y orquestación",
-            "Optimización de recursos en la nube",
-            "Automatización de despliegues",
-            "Gestión de backups y recuperación",
-            "Seguridad de infraestructura",
-            "Documentación de procesos DevOps",
-            "Coordinación con equipos de desarrollo",
-          ],
-        },
-      ],
-    },
+      miembros: ["Luis Felipe Jimenez"],
+      responsabilidades: [
+        "Diseñar y optimizar esquema de base de datos",
+        "Configurar infraestructura en la nube",
+        "Implementar monitoreo y logging",
+        "Gestionar backups y recuperación",
+        "Auditorías de seguridad"
+      ]
+    }
   ],
-  methodology: {
-    name: "Scrum",
-    description:
-      "El equipo trabaja con metodología ágil Scrum, organizando el trabajo en sprints de 2 semanas.",
-    sprints: [
-      {
-        number: 1,
-        name: "MVP - Acceso y Público Básico",
-        duration: "2 semanas",
-        focus: [
-          "Landing Page",
-          "Sign-up y Login",
-          "Características principales",
-          "Sobre nosotros",
-        ],
-      },
-      {
-        number: 2,
-        name: "Finanzas Básicas",
-        duration: "2 semanas",
-        focus: [
-          "Dashboard financiero",
-          "Registrar transacciones",
-          "Gestión de cuentas",
-          "Calendario financiero",
-          "Políticas de privacidad",
-        ],
-      },
-      {
-        number: 3,
-        name: "Valor Agregado (Reportes e IA)",
-        duration: "2 semanas",
-        focus: [
-          "Reportes y estadísticas",
-          "Metas financieras",
-          "Recomendaciones del Agente IA",
-        ],
-      },
-      {
-        number: 4,
-        name: "Experiencia Avanzada",
-        duration: "2 semanas",
-        focus: [
-          "Blog/Artículos",
-          "FAQ",
-          "Contacto/Soporte",
-          "Importar transacciones CSV/Excel",
-        ],
-      },
-      {
-        number: 5,
-        name: "Administración y Robustez",
-        duration: "2 semanas",
-        focus: [
-          "Perfil y configuración",
-          "Centro de ayuda interno",
-          "Panel de administración",
-          "Monitoreo y métricas",
-          "Gestión de seguridad",
-          "Tour interactivo",
-        ],
-      },
-    ],
-  },
+
+  sprints: [
+    {
+      id: "sprint-1",
+      nombre: "Sprint 1: MVP - Fundamentos",
+      duracion: "Semanas 1-2",
+      color: "#3b82f6",
+      enfoque: "Autenticación de usuarios y registro básico de ingresos",
+      tareas: [
+        {
+          rol: "Product Owner",
+          actividades: [
+            "Definir backlog priorizado",
+            "Crear historias de usuario (HU1, HU2)"
+          ]
+        },
+        {
+          rol: "Frontend",
+          actividades: [
+            "Página de login y registro",
+            "Dashboard básico",
+            "Formulario de ingresos"
+          ]
+        },
+        {
+          rol: "Backend",
+          actividades: [
+            "API autenticación JWT",
+            "API CRUD de ingresos",
+            "Validaciones de seguridad"
+          ]
+        },
+        {
+          rol: "DevOps",
+          actividades: [
+            "Diseñar modelo BD (usuarios, ingresos)",
+            "Configurar PostgreSQL",
+            "Setup repositorio"
+          ]
+        },
+        {
+          rol: "Scrum Master",
+          actividades: [
+            "Facilitar Sprint Planning",
+            "Organizar Daily Standups",
+            "Integrar front-back"
+          ]
+        }
+      ]
+    },
+    {
+      id: "sprint-2",
+      nombre: "Sprint 2: Gestión Financiera Básica",
+      duracion: "Semanas 3-4",
+      color: "#10b981",
+      enfoque: "Registro de egresos, categorización y presupuestos mensuales",
+      tareas: [
+        {
+          rol: "Product Owner",
+          actividades: [
+            "Validar HU3 (egresos) y HU4 (presupuestos)",
+            "Priorizar funcionalidades de dashboard"
+          ]
+        },
+        {
+          rol: "Frontend",
+          actividades: [
+            "Formulario de egresos y categorías",
+            "Interfaz de presupuestos",
+            "Dashboard con gráficos básicos"
+          ]
+        },
+        {
+          rol: "Backend",
+          actividades: [
+            "API CRUD egresos y categorías",
+            "API de presupuestos",
+            "API resúmenes para dashboard"
+          ]
+        },
+        {
+          rol: "DevOps",
+          actividades: [
+            "Tablas egresos y presupuestos",
+            "Índices para optimización",
+            "Backup automático"
+          ]
+        },
+        {
+          rol: "Scrum Master",
+          actividades: [
+            "Integrar módulos nuevos",
+            "Testing de integración",
+            "Sprint Review y Retrospectiva"
+          ]
+        }
+      ]
+    },
+    {
+      id: "sprint-3",
+      nombre: "Sprint 3: Análisis y Reportes",
+      duracion: "Semanas 5-6",
+      color: "#f59e0b",
+      enfoque: "Reportes financieros, análisis de tendencias y objetivos de ahorro",
+      tareas: [
+        {
+          rol: "Product Owner",
+          actividades: [
+            "Validar HU6 (reportes) y HU7 (ahorros)",
+            "Definir criterios de metas (HU8)"
+          ]
+        },
+        {
+          rol: "Frontend",
+          actividades: [
+            "Módulo de reportes con filtros",
+            "Gráficos avanzados",
+            "Interfaz de ahorros y metas"
+          ]
+        },
+        {
+          rol: "Backend",
+          actividades: [
+            "API generación de reportes",
+            "API ahorros y metas",
+            "Lógica de análisis de tendencias"
+          ]
+        },
+        {
+          rol: "DevOps",
+          actividades: [
+            "Tablas de ahorros y metas",
+            "Optimizar queries de reportes",
+            "Implementar caché"
+          ]
+        },
+        {
+          rol: "Scrum Master",
+          actividades: [
+            "Integrar módulo de reportes",
+            "Testing de generación PDF",
+            "Validar rendimiento"
+          ]
+        }
+      ]
+    },
+    {
+      id: "sprint-4",
+      nombre: "Sprint 4: Experiencia Avanzada",
+      duracion: "Semanas 7-8",
+      color: "#8b5cf6",
+      enfoque: "Notificaciones, calendario financiero y modo offline",
+      tareas: [
+        {
+          rol: "Product Owner",
+          actividades: [
+            "Validar HU9 (notificaciones) y HU10 (calendario)",
+            "Requerimientos modo offline (HU11)"
+          ]
+        },
+        {
+          rol: "Frontend",
+          actividades: [
+            "Sistema de notificaciones push",
+            "Calendario interactivo",
+            "Modo offline con sincronización"
+          ]
+        },
+        {
+          rol: "Backend",
+          actividades: [
+            "API notificaciones y recordatorios",
+            "Alertas inteligentes",
+            "API sincronización offline"
+          ]
+        },
+        {
+          rol: "DevOps",
+          actividades: [
+            "Tablas notificaciones",
+            "Servicio push notifications",
+            "Queue para notificaciones"
+          ]
+        },
+        {
+          rol: "Scrum Master",
+          actividades: [
+            "Integrar notificaciones",
+            "Testing funcionalidades offline",
+            "Validar sincronización"
+          ]
+        }
+      ]
+    },
+    {
+      id: "sprint-5",
+      nombre: "Sprint 5: Administración y Robustez",
+      duracion: "Semanas 9-10",
+      color: "#ef4444",
+      enfoque: "Perfil de usuario, centro de ayuda, panel admin y seguridad final",
+      tareas: [
+        {
+          rol: "Product Owner",
+          actividades: [
+            "Validar HU12 (perfil) y HU13 (ayuda)",
+            "Aprobar panel administrativo",
+            "Preparar demo final"
+          ]
+        },
+        {
+          rol: "Frontend",
+          actividades: [
+            "Módulo de perfil",
+            "Centro de ayuda",
+            "Panel administrativo"
+          ]
+        },
+        {
+          rol: "Backend",
+          actividades: [
+            "APIs de perfil y ayuda",
+            "API administrativa",
+            "Optimización final"
+          ]
+        },
+        {
+          rol: "DevOps",
+          actividades: [
+            "Sistema de logs y monitoreo",
+            "Auditoría de seguridad",
+            "Preparar entorno producción"
+          ]
+        },
+        {
+          rol: "Scrum Master",
+          actividades: [
+            "Testing end-to-end completo",
+            "CI/CD para producción",
+            "Documentación técnica"
+          ]
+        }
+      ]
+    }
+  ]
 };

@@ -49,37 +49,35 @@
         <!-- Información del equipo -->
         <section class="info-section">
           <p class="info-description" id="team-description">
-            Roles, responsabilidades y organización ágil del proyecto Finanz
+            <!-- Se cargará desde team_data.js -->
           </p>
         </section>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading" role="status" aria-live="polite">
+          <div class="spinner"></div>
+          <p>Cargando información del equipo...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="error-state" class="error-state" hidden role="alert">
+          <h2>Error al cargar información</h2>
+          <p id="error-message"></p>
+        </div>
 
         <!-- Roles del equipo -->
         <section class="roles-section">
           <h2 class="section-title">Roles del Equipo</h2>
-          <div id="roles-container" class="roles-grid">
+          <div id="roles-container" class="roles-container">
             <!-- Se cargará dinámicamente desde team_data.js -->
-          </div>
-
-          <div id="loading" class="loading" role="status" aria-live="polite">
-            <div class="spinner"></div>
-            <p>Cargando información del equipo...</p>
-          </div>
-
-          <div id="error-state" class="error-state" hidden role="alert">
-            <h2>Error al cargar información</h2>
-            <p id="error-message"></p>
           </div>
         </section>
 
-        <!-- Metodología -->
-        <section class="methodology-section">
-          <h2 class="section-title">Metodología de Trabajo</h2>
-          <div id="methodology-container" class="methodology-card">
-            <!-- Se cargará dinámicamente -->
-          </div>
-
-          <h3 class="subsection-title">Sprints del Proyecto</h3>
-          <div id="sprints-container" class="sprints-grid">
+        <!-- Sprints del proyecto -->
+        <section class="sprints-section">
+          <h2 class="section-title">Distribución por Sprints</h2>
+          <p class="section-description">Planificación de entregas en 10 semanas (5 sprints de 2 semanas)</p>
+          <div id="sprints-container" class="sprints-container">
             <!-- Se cargará dinámicamente -->
           </div>
         </section>
