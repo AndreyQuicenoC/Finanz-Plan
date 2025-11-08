@@ -1,288 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Mapa de Sitio - Gestor de Finanzas Personales</title>
-    <link rel="stylesheet" href="../styles/base.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mapa de sitio del Gestor de Finanzas Personales"
+    />
+    <title>Mapa de Sitio - Finanz</title>
+    <link rel="stylesheet" href="../styles/user_stories.css" />
     <link rel="stylesheet" href="../styles/site_map.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="wrap">
-      <div class="header">
-        <div class="logo">MS</div>
-        <div class="title">
-          <h1>
-            Mapa de sitio — Gestor de Finanzas Personales (zona pública +
-            privada + admin)
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <h1 class="logo">
+            <span class="logo-icon"></span>
+            Mapa de Sitio
           </h1>
-          <p>
+          <div class="project-info">
+            <span class="project-name">Finanz</span>
+          </div>
+          <div style="display: flex; gap: 0.5rem; align-items: center;">
+            <a href="../index.html" class="back-button" aria-label="Volver al inicio">
+              <span>←</span> Inicio
+            </a>
+            <button
+              id="theme-toggle"
+              class="theme-toggle"
+              aria-label="Cambiar tema"
+            >
+              <span class="theme-icon">Oscuro</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <!-- Información del proyecto -->
+        <section class="info-section">
+          <p class="info-description" id="site-description">
             Diagrama HTML interactivo pensado para la presentación: muestra qué
             ve un usuario antes de loguearse y la estructura interna.
           </p>
-        </div>
-      </div>
+        </section>
 
-      <a
-        href="../index.html"
-        class="back-btn"
-        style="margin-top: 18px; display: inline-block"
-      >
-        <span>←</span> Volver al inicio
-      </a>
-
-      <div class="card">
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-          "
-        >
-          <div style="display: flex; align-items: center; gap: 12px">
-            <span class="badge public">Zona pública</span>
-            <span class="badge private">Zona privada</span>
-            <span class="badge admin">Zona admin</span>
+        <!-- Leyenda de badges -->
+        <section class="controls">
+          <div class="badge-legend" id="badge-legend">
+            <!-- Se cargará dinámicamente -->
           </div>
-          <div class="controls">
-            <button class="btn" id="expandAll">Expandir todo</button>
-            <button class="btn" id="collapseAll">Colapsar todo</button>
-            <button class="btn" id="download">Descargar HTML</button>
+          <div class="control-buttons">
+            <button class="btn-control" id="expandAll">Expandir todo</button>
+            <button class="btn-control" id="collapseAll">Colapsar todo</button>
           </div>
-        </div>
+        </section>
 
-        <div class="tree" id="siteTree">
-          <ul class="tree-root">
-            <li class="node" data-type="root">
-              <button class="toggle" aria-expanded="true">▾</button>
-              <div class="label">
-                <div class="name">Zona Pública (antes de login)</div>
-                <div class="desc">
-                  Páginas que ve un usuario nuevo sin autenticación
-                </div>
-              </div>
-            </li>
-            <div class="branch">
-              <ul>
-                <li class="node" data-type="public">
-                  <div style="width: 6px"></div>
-                  <div class="label">
-                    <div class="name">Landing Page</div>
-                    <div class="desc">
-                      Hero, beneficios, capturas, CTA (Regístrate)
-                    </div>
-                  </div>
-                </li>
+        <!-- Árbol del mapa de sitio -->
+        <section class="site-tree-section">
+          <div id="site-tree-container" class="site-tree">
+            <!-- Se cargará dinámicamente desde site_map_data.js -->
+          </div>
 
-                <li class="node" data-type="public">
-                  <div class="label">
-                    <div class="name">Cómo funciona / Tour</div>
-                    <div class="desc">
-                      Paso a paso visual para nuevos usuarios
-                    </div>
-                  </div>
-                </li>
+          <div id="loading" class="loading" role="status" aria-live="polite">
+            <div class="spinner"></div>
+            <p>Cargando mapa de sitio...</p>
+          </div>
 
-                <li class="node" data-type="public">
-                  <div class="label">
-                    <div class="name">Características principales</div>
-                    <div class="desc">
-                      Gestión cuentas, reportes, IA, calendario
-                    </div>
-                  </div>
-                </li>
+          <div id="error-state" class="error-state" hidden role="alert">
+            <h2>Error al cargar el mapa</h2>
+            <p id="error-message"></p>
+          </div>
+        </section>
 
-                <li class="node" data-type="public">
-                  <div class="label">
-                    <div class="name">Planes / Precios</div>
-                    <div class="desc">Gratuito vs Premium (simulado)</div>
-                  </div>
-                </li>
-
-                <li class="node" data-type="public">
-                  <div class="label">
-                    <div class="name">Blog / Artículos</div>
-                    <div class="desc">
-                      Contenido educativo para atraer y retener usuarios
-                    </div>
-                  </div>
-                </li>
-
-                <li class="node" data-type="public">
-                  <div class="label">
-                    <div class="name">Sobre nosotros</div>
-                    <div class="desc">Equipo y propósito del proyecto</div>
-                  </div>
-                </li>
-
-                <li class="node" data-type="public">
-                  <div class="label">
-                    <div class="name">FAQ</div>
-                    <div class="desc">
-                      Preguntas frecuentes (seguridad, exportación, cuentas)
-                    </div>
-                  </div>
-                </li>
-
-                <li class="node" data-type="public">
-                  <div class="label">
-                    <div class="name">Contacto / Soporte</div>
-                    <div class="desc">Formulario, correo, redes</div>
-                  </div>
-                </li>
-
-                <li class="node" data-type="public">
-                  <div class="label">
-                    <div class="name">Políticas (Privacidad & Términos)</div>
-                    <div class="desc">
-                      Requisitos legales y aviso de tratamiento de datos
-                    </div>
-                  </div>
-                </li>
-
-                <li class="node" data-type="public">
-                  <div class="label">
-                    <div class="name">
-                      Registro / Login / Recuperar contraseña
-                    </div>
-                    <div class="desc">Formularios y flujo de autenticación</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Privada -->
-            <li class="node" data-type="root" style="margin-top: 18px">
-              <button class="toggle" aria-expanded="false">▸</button>
-              <div class="label">
-                <div class="name">Zona Privada (después de login)</div>
-                <div class="desc">
-                  Funcionalidades core para usuarios autenticados
-                </div>
-              </div>
-            </li>
-            <div class="branch" style="display: none">
-              <ul>
-                <li class="node" data-type="private">
-                  <div class="label">
-                    <div class="name">Dashboard</div>
-                    <div class="desc">Resumen, KPIs, recomendaciones IA</div>
-                  </div>
-                </li>
-
-                <li class="node" data-type="private">
-                  <div class="label">
-                    <div class="name">Transacciones</div>
-                    <div class="desc">
-                      Crear/editar/eliminar, clasificación automática, CSV
-                    </div>
-                  </div>
-                </li>
-
-                <li class="node" data-type="private">
-                  <div class="label">
-                    <div class="name">Cuentas</div>
-                    <div class="desc">
-                      Agregar bancos, billeteras, ver saldos
-                    </div>
-                  </div>
-                </li>
-
-                <li class="node" data-type="private">
-                  <div class="label">
-                    <div class="name">Calendario Financiero</div>
-                    <div class="desc">
-                      Pagos recurrentes, recordatorios, metas
-                    </div>
-                  </div>
-                </li>
-
-                <li class="node" data-type="private">
-                  <div class="label">
-                    <div class="name">Reportes y Estadísticas</div>
-                    <div class="desc">Gráficas interactivas, exportación</div>
-                  </div>
-                </li>
-
-                <li class="node" data-type="private">
-                  <div class="label">
-                    <div class="name">Metas Financieras</div>
-                    <div class="desc">Progreso visual, planes de ahorro</div>
-                  </div>
-                </li>
-
-                <li class="node" data-type="private">
-                  <div class="label">
-                    <div class="name">Agente de Recomendación (IA)</div>
-                    <div class="desc">
-                      Sugerencias, perfil de riesgo, alertas
-                    </div>
-                  </div>
-                </li>
-
-                <li class="node" data-type="private">
-                  <div class="label">
-                    <div class="name">Perfil y Configuración</div>
-                    <div class="desc">
-                      Datos, preferencias, 2FA, eliminar cuenta
-                    </div>
-                  </div>
-                </li>
-
-                <li class="node" data-type="private">
-                  <div class="label">
-                    <div class="name">Centro de ayuda interno</div>
-                    <div class="desc">Soporte dentro de la app</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Admin -->
-            <li class="node" data-type="root" style="margin-top: 18px">
-              <button class="toggle" aria-expanded="false">▸</button>
-              <div class="label">
-                <div class="name">Zona Administrativa (solo equipo)</div>
-                <div class="desc">
-                  Herramientas internas para operación y DevOps
-                </div>
-              </div>
-            </li>
-            <div class="branch" style="display: none">
-              <ul>
-                <li class="node" data-type="admin">
-                  <div class="label">
-                    <div class="name">Panel de Administración</div>
-                    <div class="desc">Usuarios, logs, roles</div>
-                  </div>
-                </li>
-                <li class="node" data-type="admin">
-                  <div class="label">
-                    <div class="name">Monitoreo y métricas</div>
-                    <div class="desc">Uptime, recursos, alertas</div>
-                  </div>
-                </li>
-                <li class="node" data-type="admin">
-                  <div class="label">
-                    <div class="name">Seguridad</div>
-                    <div class="desc">Dependencias, permisos, revisiones</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </ul>
-        </div>
+        <p class="footer-note">
+          Consejo: usa los botones <strong>Expandir todo</strong> /
+          <strong>Colapsar todo</strong> para preparar la diapositiva según la
+          duración de tu exposición.
+        </p>
       </div>
+    </main>
 
-      <p style="margin-top: 14px; color: var(--muted); font-size: 13px">
-        Consejo: usa los botones <strong>Expandir todo</strong>/<strong
-          >Colapsar todo</strong
-        >
-        para preparar la diapositiva según la duración de tu exposición.
-      </p>
-    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Finanz - Gestor de Finanzas Personales</p>
+        <p>Estructura de sitio para presentación del proyecto</p>
+      </div>
+    </footer>
 
+    <script src="../data/site_map_data.js"></script>
     <script src="../scripts/site_map.js"></script>
   </body>
 </html>
