@@ -149,7 +149,10 @@ function renderERD() {
 
   // Crear marker para flechas
   const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
-  const marker = document.createElementNS("http://www.w3.org/2000/svg", "marker");
+  const marker = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "marker"
+  );
   marker.setAttribute("id", "arrow");
   marker.setAttribute("markerWidth", "10");
   marker.setAttribute("markerHeight", "10");
@@ -195,7 +198,10 @@ function renderERD() {
     g.appendChild(rect);
 
     // Título de la tabla
-    const title = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    const title = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "text"
+    );
     title.setAttribute("x", "12");
     title.setAttribute("y", "24");
     title.setAttribute("class", "table-title");
@@ -204,7 +210,10 @@ function renderERD() {
 
     // Campos
     table.fields.forEach((field, index) => {
-      const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      const text = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "text"
+      );
       text.setAttribute("x", "12");
       text.setAttribute("y", 50 + index * 18);
 

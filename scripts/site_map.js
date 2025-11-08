@@ -190,9 +190,7 @@ function createZoneHTML(zone, index) {
     state.expandedZones.add(zoneId);
   }
 
-  const pagesHTML = zone.pages
-    .map((page) => createPageHTML(page))
-    .join("");
+  const pagesHTML = zone.pages.map((page) => createPageHTML(page)).join("");
 
   return `
     <div class="zone-container" data-zone-id="${zoneId}">

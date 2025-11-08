@@ -27,11 +27,6 @@ const SITE_MAP_DATA = {
           type: "public",
         },
         {
-          name: "Planes / Precios",
-          description: "Gratuito vs Premium (simulado)",
-          type: "public",
-        },
-        {
           name: "Blog / Artículos",
           description: "Contenido educativo para atraer y retener usuarios",
           type: "public",
@@ -43,8 +38,7 @@ const SITE_MAP_DATA = {
         },
         {
           name: "FAQ",
-          description:
-            "Preguntas frecuentes (seguridad, exportación, cuentas)",
+          description: "Preguntas frecuentes (seguridad, exportación, cuentas)",
           type: "public",
         },
         {
@@ -78,8 +72,7 @@ const SITE_MAP_DATA = {
         },
         {
           name: "Transacciones",
-          description:
-            "Crear/editar/eliminar, clasificación automática, CSV",
+          description: "Crear/editar/eliminar, clasificación automática, CSV",
           type: "private",
         },
         {
