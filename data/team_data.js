@@ -3,12 +3,13 @@
 // ===================================
 
 const TEAM_DATA = {
-  descripcion: "Equipo de 7 integrantes organizados con metodología Scrum para desarrollo ágil del proyecto Finanz",
-  
+  descripcion:
+    "Equipo de 6 integrantes organizados con metodología Scrum para desarrollo ágil del proyecto Finanz",
+
   roles: [
     {
-      id: "product-owner",
-      nombre: "Product Owner",
+      id: "product-owner-frontend",
+      nombre: "Product Owner & Frontend",
       icono: "PO",
       color: "#3b82f6",
       miembros: ["Andrey Quiceno"],
@@ -16,309 +17,432 @@ const TEAM_DATA = {
         "Definir y priorizar el Product Backlog",
         "Crear historias de usuario con criterios de aceptación",
         "Validar que el desarrollo cumpla los requerimientos",
-        "Maximizar el valor del producto",
-        "Ser la voz del usuario y stakeholders"
-      ]
+        "Desarrollar componentes frontend según asignación",
+        "Generar informes de sprint",
+      ],
     },
     {
-      id: "scrum-master",
-      nombre: "Scrum Master",
-      icono: "SM",
-      color: "#8b5cf6",
-      miembros: ["Ivan Ausecha"],
-      responsabilidades: [
-        "Facilitar ceremonias Scrum (Planning, Daily, Review, Retrospective)",
-        "Gestionar pull requests y merges en GitHub",
-        "Integrar frontend con backend",
-        "Realizar testing y aseguramiento de calidad",
-        "Implementar CI/CD y pipeline de despliegue"
-      ]
-    },
-    {
-      id: "frontend",
+      id: "frontend-dev",
       nombre: "Desarrollo Frontend",
       icono: "FE",
       color: "#10b981",
-      miembros: ["Daniel Trujillo", "Jonathan Aristizabal"],
+      miembros: ["Daniel Trujillo", "Ivan Ausecha"],
       responsabilidades: [
         "Desarrollar interfaces de usuario responsive",
         "Implementar componentes y vistas del sistema",
         "Integrar con APIs del backend",
-        "Optimizar rendimiento frontend",
-        "Testing de componentes"
-      ]
+        "Validaciones frontend en tiempo real",
+        "Testing de componentes",
+      ],
     },
     {
-      id: "backend",
-      nombre: "Desarrollo Backend",
-      icono: "BE",
+      id: "backend-db",
+      nombre: "Backend & Base de Datos",
+      icono: "BD",
       color: "#f59e0b",
-      miembros: ["UV Casaviejas", "Luciana Urrego"],
+      miembros: ["Francesco"],
       responsabilidades: [
+        "Diseñar y optimizar esquema de base de datos",
         "Desarrollar APIs RESTful seguras",
         "Implementar lógica de negocio y validaciones",
         "Gestionar operaciones con base de datos",
+        "Encriptación y seguridad de datos",
+      ],
+    },
+    {
+      id: "backend-dev",
+      nombre: "Desarrollo Backend",
+      icono: "BE",
+      color: "#8b5cf6",
+      miembros: ["UV Casaviejas", "UV Juan José"],
+      responsabilidades: [
+        "Desarrollar APIs y endpoints",
+        "Implementar autenticación y autorización",
+        "Validaciones del lado del servidor",
         "Documentar APIs con Swagger/OpenAPI",
-        "Testing de servicios backend"
-      ]
+        "Testing de servicios backend",
+      ],
     },
     {
       id: "devops",
-      nombre: "DevOps & Base de Datos",
+      nombre: "DevOps & Pruebas",
       icono: "DO",
       color: "#ef4444",
-      miembros: ["Luis Felipe Jimenez"],
+      miembros: ["Jonathan"],
       responsabilidades: [
-        "Diseñar y optimizar esquema de base de datos",
-        "Configurar infraestructura en la nube",
+        "Configurar CI/CD y pipeline de despliegue",
+        "Testing end-to-end de la aplicación",
+        "Gestionar pull requests y merges",
         "Implementar monitoreo y logging",
-        "Gestionar backups y recuperación",
-        "Auditorías de seguridad"
-      ]
-    }
+        "Preparar entorno de producción",
+      ],
+    },
   ],
 
   sprints: [
     {
       id: "sprint-1",
-      nombre: "Sprint 1: MVP - Fundamentos",
+      nombre: "Sprint 1: MVP - Acceso y Público Básico",
       duracion: "Semanas 1-2",
       color: "#3b82f6",
-      enfoque: "Autenticación de usuarios y registro básico de ingresos",
+      enfoque: "HU01-HU04, HU10-HU12 - Sitio funcional con acceso de usuarios",
       tareas: [
         {
-          rol: "Product Owner",
+          rol: "Andrey (Product Owner & Frontend)",
           actividades: [
-            "Definir backlog priorizado",
-            "Crear historias de usuario (HU1, HU2)"
-          ]
+            "Definir requerimientos detallados para landing page (HU01-HU04)",
+            "Especificar flujos de registro, login y recuperación (HU10-HU12)",
+            "Desarrollar landing page (HU01), tour (HU02) y características (HU03)",
+            "Crear y priorizar historias del Sprint 1",
+            "Generar informe del Sprint 1",
+          ],
         },
         {
-          rol: "Frontend",
+          rol: "Ivan (Frontend)",
           actividades: [
-            "Página de login y registro",
-            "Dashboard básico",
-            "Formulario de ingresos"
-          ]
+            "Desarrollar formulario de login con validaciones (HU11)",
+            "Implementar formulario de registro (HU10)",
+            "Crear formulario de recuperación de contraseña (HU12)",
+            "Implementar validaciones en tiempo real",
+            "Integrar spinners y mensajes de feedback",
+          ],
         },
         {
-          rol: "Backend",
+          rol: "Daniel (Frontend)",
           actividades: [
-            "API autenticación JWT",
-            "API CRUD de ingresos",
-            "Validaciones de seguridad"
-          ]
+            "Implementar página de planes/precios (HU04)",
+            "Desarrollar mensajes de error y validación",
+            "Implementar redirecciones post-autenticación",
+            "Optimizar responsive design",
+          ],
         },
         {
-          rol: "DevOps",
+          rol: "Francesco (Backend & BD)",
           actividades: [
-            "Diseñar modelo BD (usuarios, ingresos)",
-            "Configurar PostgreSQL",
-            "Setup repositorio"
-          ]
+            "Diseñar estructura de base de datos",
+            "Crear tablas de usuarios con campos necesarios",
+            "Implementar sistema de transacciones (preparación)",
+            "Configurar PostgreSQL y migraciones",
+          ],
         },
         {
-          rol: "Scrum Master",
+          rol: "Juan José (Backend - Auth)",
           actividades: [
-            "Facilitar Sprint Planning",
-            "Organizar Daily Standups",
-            "Integrar front-back"
-          ]
-        }
-      ]
+            "API de login y generación de tokens JWT (HU11)",
+            "API de registro de usuarios (HU10)",
+            "Sistema de recuperación de contraseña (HU12)",
+            "Implementar encriptación de contraseñas",
+            "Validaciones del lado del servidor",
+          ],
+        },
+        {
+          rol: "Casa (Backend - Cuentas)",
+          actividades: [
+            "API para contenido de landing y planes",
+            "Preparar base para gestión de cuentas",
+            "Validaciones de datos",
+            "Manejo de sesiones y tokens",
+          ],
+        },
+        {
+          rol: "Jonathan (DevOps)",
+          actividades: [
+            "Configurar repositorio y estructura de branches",
+            "Implementar HTTPS y certificados SSL",
+            "Rate limiting en endpoints de autenticación",
+            "Configurar entornos de desarrollo y staging",
+            "Testing de flujos de autenticación",
+          ],
+        },
+      ],
     },
     {
       id: "sprint-2",
-      nombre: "Sprint 2: Gestión Financiera Básica",
+      nombre: "Sprint 2: Finanzas Básicas",
       duracion: "Semanas 3-4",
       color: "#10b981",
-      enfoque: "Registro de egresos, categorización y presupuestos mensuales",
+      enfoque: "HU13, HU14, HU16, HU17 - Gestión mínima de finanzas",
       tareas: [
         {
-          rol: "Product Owner",
+          rol: "Andrey (Product Owner & Frontend)",
           actividades: [
-            "Validar HU3 (egresos) y HU4 (presupuestos)",
-            "Priorizar funcionalidades de dashboard"
-          ]
+            "Definir estructura del dashboard y widgets (HU13)",
+            "Especificar calendario financiero (HU17)",
+            "Desarrollar dashboard principal con resumen (HU13)",
+            "Implementar calendario financiero interactivo (HU17)",
+            "Generar informe del Sprint 2",
+          ],
         },
         {
-          rol: "Frontend",
+          rol: "Ivan (Frontend)",
           actividades: [
-            "Formulario de egresos y categorías",
-            "Interfaz de presupuestos",
-            "Dashboard con gráficos básicos"
-          ]
+            "Crear formulario de registro de transacciones (HU14)",
+            "Desarrollar lista de transacciones con filtros",
+            "Implementar visualizaciones de saldos",
+            "Integrar módulo de transacciones con backend",
+          ],
         },
         {
-          rol: "Backend",
+          rol: "Daniel (Frontend)",
           actividades: [
-            "API CRUD egresos y categorías",
-            "API de presupuestos",
-            "API resúmenes para dashboard"
-          ]
+            "Implementar gestión de cuentas (crear, editar, eliminar) (HU16)",
+            "Desarrollar navegación entre módulos",
+            "Optimizar UI/UX de dashboard",
+          ],
         },
         {
-          rol: "DevOps",
+          rol: "Francesco (Backend & BD)",
           actividades: [
-            "Tablas egresos y presupuestos",
-            "Índices para optimización",
-            "Backup automático"
-          ]
+            "Diseñar tablas de transacciones con índices optimizados",
+            "CRUD completo de transacciones (HU14)",
+            "API de cálculos de saldos e ingresos/egresos",
+            "Proteger rutas privadas del dashboard",
+            "Validar integridad de datos financieros",
+          ],
         },
         {
-          rol: "Scrum Master",
+          rol: "Juan José (Backend)",
           actividades: [
-            "Integrar módulos nuevos",
-            "Testing de integración",
-            "Sprint Review y Retrospectiva"
-          ]
-        }
-      ]
+            "API para datos del dashboard y resúmenes",
+            "API del calendario financiero (HU17)",
+            "Sistema de recordatorios de pagos",
+            "Validaciones de datos financieros",
+          ],
+        },
+        {
+          rol: "Casa (Backend - Cuentas)",
+          actividades: [
+            "CRUD de cuentas bancarias (HU16)",
+            "Crear relaciones entre usuarios, cuentas y transacciones",
+            "API de gestión de cuentas",
+            "Validaciones de saldos",
+          ],
+        },
+        {
+          rol: "Jonathan (DevOps)",
+          actividades: [
+            "Testing de CRUD completo",
+            "Testing de cálculos financieros",
+            "Validar permisos y autorización",
+            "Integración frontend-backend",
+            "Actualizar CI/CD",
+          ],
+        },
+      ],
     },
     {
       id: "sprint-3",
-      nombre: "Sprint 3: Análisis y Reportes",
+      nombre: "Sprint 3: Valor Agregado - Reportes e IA",
       duracion: "Semanas 5-6",
       color: "#f59e0b",
-      enfoque: "Reportes financieros, análisis de tendencias y objetivos de ahorro",
+      enfoque: "HU18-HU20 - Análisis y diferenciación del proyecto",
       tareas: [
         {
-          rol: "Product Owner",
+          rol: "Andrey (Product Owner & Frontend)",
           actividades: [
-            "Validar HU6 (reportes) y HU7 (ahorros)",
-            "Definir criterios de metas (HU8)"
-          ]
+            "Definir tipos de reportes y estadísticas (HU18)",
+            "Especificar estructura de metas financieras (HU19)",
+            "Desarrollar componentes de visualización de datos",
+            "Implementar gráficos con Chart.js/D3 (HU18)",
+            "Generar informe del Sprint 3",
+          ],
         },
         {
-          rol: "Frontend",
+          rol: "Ivan (Frontend)",
           actividades: [
-            "Módulo de reportes con filtros",
-            "Gráficos avanzados",
-            "Interfaz de ahorros y metas"
-          ]
+            "Crear interfaz de metas financieras (HU19)",
+            "Desarrollar formularios para crear y editar metas",
+            "Implementar visualización de progreso de metas",
+          ],
         },
         {
-          rol: "Backend",
+          rol: "Daniel (Frontend)",
           actividades: [
-            "API generación de reportes",
-            "API ahorros y metas",
-            "Lógica de análisis de tendencias"
-          ]
+            "Desarrollar sección de recomendaciones IA (HU20)",
+            "Crear gráficos interactivos (barras, líneas, torta)",
+            "Mejorar dashboard con análisis",
+          ],
         },
         {
-          rol: "DevOps",
+          rol: "Francesco (Backend & BD)",
           actividades: [
-            "Tablas de ahorros y metas",
-            "Optimizar queries de reportes",
-            "Implementar caché"
-          ]
+            "Diseñar tablas de metas financieras",
+            "CRUD de metas financieras (HU19)",
+            "Optimizar consultas complejas de reportes",
+            "Configurar cache para reportes frecuentes",
+          ],
         },
         {
-          rol: "Scrum Master",
+          rol: "Juan José (Backend)",
           actividades: [
-            "Integrar módulo de reportes",
-            "Testing de generación PDF",
-            "Validar rendimiento"
-          ]
-        }
-      ]
+            "APIs de generación de reportes y estadísticas (HU18)",
+            "Sistema de seguimiento de progreso de metas",
+            "Cálculos de proyecciones",
+          ],
+        },
+        {
+          rol: "Casa (Backend)",
+          actividades: [
+            "API de recomendaciones con reglas básicas (HU20)",
+            "Algoritmo simple de sugerencias",
+            "Cálculos complejos de análisis financiero",
+          ],
+        },
+        {
+          rol: "Jonathan (DevOps)",
+          actividades: [
+            "Testing de cálculos y agregaciones",
+            "Validar visualizaciones de datos",
+            "Testing de lógica de recomendaciones",
+            "Actualizar CI/CD",
+          ],
+        },
+      ],
     },
     {
       id: "sprint-4",
       nombre: "Sprint 4: Experiencia Avanzada",
       duracion: "Semanas 7-8",
       color: "#8b5cf6",
-      enfoque: "Notificaciones, calendario financiero y modo offline",
+      enfoque: "HU05-HU09, HU15 - Mejor experiencia de usuario",
       tareas: [
         {
-          rol: "Product Owner",
+          rol: "Andrey (Product Owner & Frontend)",
           actividades: [
-            "Validar HU9 (notificaciones) y HU10 (calendario)",
-            "Requerimientos modo offline (HU11)"
-          ]
+            "Definir contenido para blog y artículos (HU05)",
+            "Crear página 'Sobre nosotros' (HU06)",
+            "Desarrollar formulario de contacto (HU08)",
+            "Implementar blog y sistema de artículos (HU05)",
+            "Generar informe del Sprint 4",
+          ],
         },
         {
-          rol: "Frontend",
+          rol: "Ivan (Frontend)",
           actividades: [
-            "Sistema de notificaciones push",
-            "Calendario interactivo",
-            "Modo offline con sincronización"
-          ]
+            "Desarrollar interfaz de importación CSV/Excel (HU15)",
+            "Crear interfaz de carga de archivos",
+            "Implementar preview de datos antes de importar",
+          ],
         },
         {
-          rol: "Backend",
+          rol: "Daniel (Frontend)",
           actividades: [
-            "API notificaciones y recordatorios",
-            "Alertas inteligentes",
-            "API sincronización offline"
-          ]
+            "Implementar FAQ con accordion (HU07)",
+            "Crear páginas de política y términos (HU09)",
+            "Desarrollar plantillas para artículos educativos",
+          ],
         },
         {
-          rol: "DevOps",
+          rol: "Francesco (Backend & BD)",
           actividades: [
-            "Tablas notificaciones",
-            "Servicio push notifications",
-            "Queue para notificaciones"
-          ]
+            "Diseñar tablas para blog y artículos",
+            "Configurar almacenamiento de archivos CSV/Excel",
+            "Validar seguridad en carga de archivos",
+            "Escaneo de archivos por malware",
+          ],
         },
         {
-          rol: "Scrum Master",
+          rol: "Juan José (Backend)",
           actividades: [
-            "Integrar notificaciones",
-            "Testing funcionalidades offline",
-            "Validar sincronización"
-          ]
-        }
-      ]
+            "API para gestión de blog y artículos (HU05)",
+            "CRUD de artículos",
+            "Endpoint para formulario de contacto (HU08)",
+          ],
+        },
+        {
+          rol: "Casa (Backend)",
+          actividades: [
+            "Parser para importación de CSV/Excel (HU15)",
+            "Validación de formato de archivos",
+            "Procesamiento masivo de transacciones",
+            "Sistema de envío de correos",
+          ],
+        },
+        {
+          rol: "Jonathan (DevOps)",
+          actividades: [
+            "Testing de carga de archivos",
+            "Validar procesamiento de CSV/Excel",
+            "Testing de formularios",
+            "Actualizar CI/CD",
+          ],
+        },
+      ],
     },
     {
       id: "sprint-5",
       nombre: "Sprint 5: Administración y Robustez",
       duracion: "Semanas 9-10",
       color: "#ef4444",
-      enfoque: "Perfil de usuario, centro de ayuda, panel admin y seguridad final",
+      enfoque: "HU21-HU25 - Producto completo y robusto",
       tareas: [
         {
-          rol: "Product Owner",
+          rol: "Andrey (Product Owner & Frontend)",
           actividades: [
-            "Validar HU12 (perfil) y HU13 (ayuda)",
-            "Aprobar panel administrativo",
-            "Preparar demo final"
-          ]
+            "Definir estructura de perfil y configuración (HU21)",
+            "Especificar controles de seguridad (HU25)",
+            "Desarrollar interfaz de perfil de usuario (HU21)",
+            "Preparar documentación de usuario",
+            "Generar informe final del proyecto",
+          ],
         },
         {
-          rol: "Frontend",
+          rol: "Ivan (Frontend)",
           actividades: [
-            "Módulo de perfil",
-            "Centro de ayuda",
-            "Panel administrativo"
-          ]
+            "Implementar formularios de edición de perfil",
+            "Desarrollar centro de ayuda con búsqueda (HU22)",
+            "Crear guías rápidas y tutoriales",
+            "Optimización de rendimiento frontend",
+          ],
         },
         {
-          rol: "Backend",
+          rol: "Daniel (Frontend)",
           actividades: [
-            "APIs de perfil y ayuda",
-            "API administrativa",
-            "Optimización final"
-          ]
+            "Desarrollar dashboard administrativo (HU23)",
+            "Implementar visualización de métricas (HU24)",
+            "Crear interfaces de configuración de seguridad",
+            "Refinamiento de UI/UX",
+          ],
         },
         {
-          rol: "DevOps",
+          rol: "Francesco (Backend & BD)",
           actividades: [
-            "Sistema de logs y monitoreo",
-            "Auditoría de seguridad",
-            "Preparar entorno producción"
-          ]
+            "Diseñar tablas de perfil y roles",
+            "Implementar sistema de logs y monitoreo (HU24)",
+            "Auditoría de seguridad completa (HU25)",
+            "Optimización de base de datos",
+            "Configurar backups automáticos",
+          ],
         },
         {
-          rol: "Scrum Master",
+          rol: "Juan José (Backend)",
           actividades: [
-            "Testing end-to-end completo",
-            "CI/CD para producción",
-            "Documentación técnica"
-          ]
-        }
-      ]
-    }
-  ]
+            "API de perfil de usuario (HU21)",
+            "API del centro de ayuda (HU22)",
+            "API de administración de usuarios (HU23)",
+            "Optimización de consultas",
+          ],
+        },
+        {
+          rol: "Casa (Backend)",
+          actividades: [
+            "API de monitoreo y métricas (HU24)",
+            "API de gestión de seguridad (HU25)",
+            "Mejora de rendimiento de APIs",
+            "Documentación completa de APIs",
+          ],
+        },
+        {
+          rol: "Jonathan (DevOps)",
+          actividades: [
+            "Testing end-to-end completo de toda la aplicación",
+            "Pruebas de carga y estrés",
+            "CI/CD completo para producción",
+            "Preparar entorno de producción",
+            "Documentación técnica",
+          ],
+        },
+      ],
+    },
+  ],
 };
