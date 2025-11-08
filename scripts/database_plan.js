@@ -80,13 +80,14 @@ function updateThemeIcon() {
  */
 function loadDatabase() {
   console.log("Cargando diagrama de base de datos...");
-  showLoading();
 
   try {
     // Verificar que DATABASE_DATA existe
     if (typeof DATABASE_DATA === "undefined") {
       throw new Error("No se encontraron los datos de la base de datos");
     }
+
+    console.log("DATABASE_DATA encontrado:", DATABASE_DATA);
 
     // Actualizar descripciones
     if (elements.dbDescription && DATABASE_DATA.subtitle) {
@@ -100,7 +101,6 @@ function loadDatabase() {
     // Renderizar lista de tablas
     renderTablesList();
 
-    hideLoading();
     console.log("Diagrama de base de datos cargado correctamente");
   } catch (error) {
     showError(error.message);
@@ -138,13 +138,20 @@ function showError(message) {
  * Renderiza la lista de tablas
  */
 function renderTablesList() {
-  if (!DATABASE_DATA.tables) return;
+  if (!DATABASE_DATA.tables || DATABASE_DATA.tables.length === 0) {
+    console.error("No hay tablas para renderizar");
+    showError("No se encontraron tablas en los datos");
+    return;
+  }
+
+  console.log(`Renderizando ${DATABASE_DATA.tables.length} tablas...`);
 
   const tablesHTML = DATABASE_DATA.tables
     .map((table) => createTableCard(table))
     .join("");
 
   elements.tablesList.innerHTML = tablesHTML;
+  console.log("Tablas renderizadas correctamente");
 }
 
 /**

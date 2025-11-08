@@ -4,7 +4,7 @@
 
 const TEAM_DATA = {
   descripcion:
-    "Equipo de 6 integrantes organizados con metodología Scrum para desarrollo ágil del proyecto Finanz",
+    "Equipo de 7 integrantes organizados con metodología Scrum para desarrollo ágil del proyecto Finanz",
 
   roles: [
     {
